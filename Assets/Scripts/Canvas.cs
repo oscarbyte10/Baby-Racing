@@ -7,9 +7,18 @@ public class Canvas : MonoBehaviour
 {
     // Objetos que componen el Canvas
     public Image objRan;
+
     public Text position;
+
+    public Image pNitro;
+    public Image sNitro;
+    public Image tNitro;
+
     // public GameObject mapa;
     // public GameObject nitro;
+    //Sprites nitro
+    public Sprite nitroVacio;
+    public Sprite nitroLleno;
     //Sprites in random box
     public Sprite bib;
     public Sprite ball;
@@ -23,17 +32,19 @@ public class Canvas : MonoBehaviour
     void Start()
     {
         addInList();
-        //objRan.sprite = bib;
-        
+        //objRan.sprite = SpriteInterrogante;
+        pNitro.sprite = nitroVacio;
+        sNitro.sprite = nitroVacio;
+        tNitro.sprite = nitroVacio;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if(Input.GetKey("space"))
+        if(Input.GetKey("left shift"))
         {
-            chooseRandomSprite(1);
-        }*/
+            // Función nitro, vaciar
+        }
         
     }
 
@@ -53,5 +64,51 @@ public class Canvas : MonoBehaviour
 
         // Choose in list with index
         objRan.sprite = listSprite[n];
+    }
+
+    public int comprobarNitro()
+    {
+        if(tNitro.sprite == nitroVacio)
+        {
+            //está vacío, envíamos un 3
+            //comprobamos el siguiente 
+            return 3;
+        }
+        else if (sNitro.sprite == nitroVacio)
+        {
+            //está vacío, envíamos un 2
+            //comprobamos el siguiente
+            return 2;
+        }
+        else if (pNitro.sprite == nitroVacio)
+        {
+            // está vacío, envíamos un 1
+            return 1;
+        }
+
+        return 0;
+    }
+    
+
+    public void llenarNitro(int n)
+    {
+       // si n = 1
+       // llenamos solamente el primer nitro
+       if(n == 1)
+        {
+            pNitro.sprite = nitroLleno;
+        }
+        // si n = 2
+        // llenamos solamente el segundo nitro
+        if (n == 2)
+        {
+            sNitro.sprite = nitroLleno;
+        }
+        // si n = 3
+        // llenamos solamente el tercer nitro
+        if (n == 3)
+        {
+            tNitro.sprite = nitroLleno;
+        }
     }
 }

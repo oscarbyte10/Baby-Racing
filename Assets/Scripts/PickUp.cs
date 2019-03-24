@@ -29,6 +29,18 @@ public class PickUp : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
+        if(this.CompareTag("Nitro"))
+        {
+
+            // destruimos el objeto
+            Destroy(this);
+
+            if(c.comprobarNitro() > 0)
+            {
+                c.llenarNitro(c.comprobarNitro());
+            }
+        }
+
         if (other.gameObject.CompareTag("Player"))
         {
             // para destruir inmediatamente 
@@ -65,6 +77,8 @@ public class PickUp : MonoBehaviour
         }
 
     }
+
+
 
     private void crearPickUpASeisSegundos(GameObject obj)
     {
