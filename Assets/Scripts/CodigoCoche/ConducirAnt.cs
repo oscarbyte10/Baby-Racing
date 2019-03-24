@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Conducir : MonoBehaviour
+public class ConducirAnt : MonoBehaviour
 {
 
     public float enginePower = 150.0f;
