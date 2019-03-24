@@ -22,14 +22,17 @@ public class ManuCar : MonoBehaviour
 
     public float groundedDrag = 3f;
 
-    public float maxVelocity = 10;
+    private float maxVelocity = 30;
 
-    public float forwardAcceleration = 200f;
-    public float reverseAcceleration = 50f;
+    private float forwardAcceleration = 550f;
+    private float reverseAcceleration = 150f;
     float thrust = 0f;
 
-    public float turnStrength = 10f;
-    float turnValue = 0f;
+    public float tilt;
+
+    private float turnStrength = 25f;
+    public float turnValue = 0f;
+
     //--------MOVEMENT--------
 
     //--------GAMEOBJECTS--------
@@ -61,6 +64,7 @@ public class ManuCar : MonoBehaviour
 
         layerMask = 1 << LayerMask.NameToLayer("Vehicle");
         layerMask = ~layerMask;
+
         //--------GAMEOBJECTS--------
 
     }
@@ -112,6 +116,10 @@ public class ManuCar : MonoBehaviour
         float turnAxis = Input.GetAxis("Horizontal");
         if (Mathf.Abs(turnAxis) > deadZone && body.velocity.sqrMagnitude > 5f)
             turnValue = turnAxis;
+
+
+        //anim.SetFloat("giro", turnValue); //al giro del animator
+
         //--------MOVEMENT--------
 
 
@@ -147,7 +155,7 @@ public class ManuCar : MonoBehaviour
         //--------MOVEMENT--------
 
         // Handle Forward and Reverse forces
-        Debug.Log(Mathf.Abs(thrust));
+        //Debug.Log(Mathf.Abs(thrust));
 
         if (Mathf.Abs(thrust) > 0)
         {
@@ -156,11 +164,13 @@ public class ManuCar : MonoBehaviour
         // Handle Turn forces
         if (turnValue > 0)
         {
-            body.AddRelativeTorque(Vector3.up * turnValue * turnStrength);
+            Vector3 torque = Vector3.up * turnValue * turnStrength;
+            body.AddRelativeTorque(torque);
         }
         else if (turnValue < 0)
         {
-            body.AddRelativeTorque(Vector3.up * turnValue * turnStrength);
+            Vector3 torque = Vector3.up * turnValue * turnStrength;
+            body.AddRelativeTorque(torque);
         }
 
         // Limit max velocity

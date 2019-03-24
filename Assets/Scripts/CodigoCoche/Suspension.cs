@@ -9,13 +9,14 @@ public class Suspension : MonoBehaviour
     private Transform ruedaTransform;
 
     public float gravityForce = 20f;
-    private float hoverForce = 250f;
+    private float hoverForce = 380f;
     public float hoverHeight = 0.5f;
     float hoverDamp = 10f;
 
     public bool grounded;
 
     public Transform hoverPoint;
+    int layerMask;
 
 
     // Works like start but before it
@@ -31,10 +32,11 @@ public class Suspension : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {        
+    {
         //Vector3 ralloOrigen = rueda.position;
-        
-        Debug.Log(hoverHeight);
+        layerMask = 1 << LayerMask.GetMask("coche de pruebas");
+        layerMask = ~layerMask;
+
 
     }
 

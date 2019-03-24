@@ -562,6 +562,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b248eb4ae72179147bafbed5f01cef03, type: 3}
+--- !u!4 &1310189271 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6120293758137573638, guid: 22ec3b66d5e78834d85c68c4fd4b9788,
+    type: 3}
+  m_PrefabInstance: {fileID: 1554619971}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1367700774 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8197548542866503606, guid: 7ea8379c4ad78dc40b9c481878d413ce,
@@ -805,14 +811,83 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 2131235075}
+      objectReference: {fileID: 1310189271}
     - target: {fileID: 6955885189607794471, guid: 4be76c1f6d94d9941bcbedd2badbbd7b,
         type: 3}
       propertyPath: m_LookAt
       value: 
-      objectReference: {fileID: 2131235075}
+      objectReference: {fileID: 1310189271}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4be76c1f6d94d9941bcbedd2badbbd7b, type: 3}
+--- !u!1001 &1554619971
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6120293758137573632, guid: 22ec3b66d5e78834d85c68c4fd4b9788,
+        type: 3}
+      propertyPath: m_Name
+      value: coche de pruebas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120293758137573638, guid: 22ec3b66d5e78834d85c68c4fd4b9788,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120293758137573638, guid: 22ec3b66d5e78834d85c68c4fd4b9788,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120293758137573638, guid: 22ec3b66d5e78834d85c68c4fd4b9788,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120293758137573638, guid: 22ec3b66d5e78834d85c68c4fd4b9788,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120293758137573638, guid: 22ec3b66d5e78834d85c68c4fd4b9788,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120293758137573638, guid: 22ec3b66d5e78834d85c68c4fd4b9788,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120293758137573638, guid: 22ec3b66d5e78834d85c68c4fd4b9788,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120293758137573638, guid: 22ec3b66d5e78834d85c68c4fd4b9788,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120293758137573638, guid: 22ec3b66d5e78834d85c68c4fd4b9788,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120293758137573638, guid: 22ec3b66d5e78834d85c68c4fd4b9788,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6120293758137573638, guid: 22ec3b66d5e78834d85c68c4fd4b9788,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22ec3b66d5e78834d85c68c4fd4b9788, type: 3}
 --- !u!146 &1593784530 stripped
 WheelCollider:
   m_CorrespondingSourceObject: {fileID: 8197548542727245673, guid: 7ea8379c4ad78dc40b9c481878d413ce,
@@ -1275,12 +1350,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124352434}
   m_CullTransparentMesh: 0
---- !u!4 &2131235075 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8197548542866503610, guid: 7ea8379c4ad78dc40b9c481878d413ce,
-    type: 3}
-  m_PrefabInstance: {fileID: 2054931039}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1853878403855121059
 PrefabInstance:
   m_ObjectHideFlags: 0
