@@ -30,8 +30,8 @@ public class ManuCar : MonoBehaviour
 
     public float tilt;
 
-    private float turnStrength = 25f;
-    public float turnValue = 0f;
+    private float turnStrength = 35f;
+    private float turnValue = 0f;
 
     //--------MOVEMENT--------
 
