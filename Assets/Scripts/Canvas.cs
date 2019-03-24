@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Canvas : MonoBehaviour
 {
-    public Canvas canvas;
     public GameObject objRan;
     public GameObject position;
     public GameObject mapa;
@@ -24,7 +23,6 @@ public class Canvas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canvas = GetComponent<Canvas>();
         image = GetComponent<Image>();
         addInList();
     }
@@ -43,12 +41,11 @@ public class Canvas : MonoBehaviour
     }
 
     //Add function calculate random number and it's choose in list with index
-    public Sprite chooseRandomSprite()
+    public void chooseRandomSprite(int n)
     {
-        //Calculate random number
-        Random rnd = new Random();
-        // NOTA: https://docs.microsoft.com/es-es/dotnet/api/system.random?view=netframework-4.7.2
+        Debug.Log("El número es:" +n);
 
-        return null;
+        // Choose in list with index
+        //image.sprite = listSprite[n];
     }
 }
