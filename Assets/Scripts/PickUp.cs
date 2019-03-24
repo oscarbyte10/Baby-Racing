@@ -29,18 +29,22 @@ public class PickUp : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
+        // si el pick-up tiene en la etiqueta Nitro, es decir, es un biberón
         if(this.CompareTag("Nitro"))
         {
 
             // destruimos el objeto
-            Destroy(this);
+            Destroy(this.gameObject);
 
             if(c.comprobarNitroVacio() > 0)
             {
                 c.llenarNitro(c.comprobarNitroVacio());
             }
+
+            Instantiate(fx, transform.position, Quaternion.identity);
         }
 
+        // si el pick-up es la caja sorpresa y el otro el jugador
         if (other.gameObject.CompareTag("Player"))
         {
             // para destruir inmediatamente 
