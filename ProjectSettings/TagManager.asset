@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Obstaculo
   - Acelerador
+  - CuadroObjeto
+  - Nitro
+  - Mapa
+  - Posicion
   layers:
   - Default
   - TransparentFX
