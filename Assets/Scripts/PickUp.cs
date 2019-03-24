@@ -19,7 +19,7 @@ public class PickUp : MonoBehaviour
     void Update()
     {
         // Mira en bucle si el pickUp debe ser creado otra vez
-        crearPickUpASeisSegundos(gameObject);
+        //crearPickUpASeisSegundos(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)

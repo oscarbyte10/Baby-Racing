@@ -30,9 +30,10 @@ public class ManuCar : MonoBehaviour
 
     public float tilt;
 
-    private float turnStrength = 35f;
-    private float turnValue = 0f;
+    private float turnStrength = 80f;
+    public float turnValue = 0f;
 
+    private float torque = 0f;
     //--------MOVEMENT--------
 
     //--------GAMEOBJECTS--------
@@ -114,7 +115,7 @@ public class ManuCar : MonoBehaviour
         // Turning
         turnValue = 0.0f;
         float turnAxis = Input.GetAxis("Horizontal");
-        if (Mathf.Abs(turnAxis) > deadZone && body.velocity.sqrMagnitude > 5f)
+        if (Mathf.Abs(turnAxis) > deadZone /*&& body.velocity.sqrMagnitude > 5f*/)
             turnValue = turnAxis;
 
 
@@ -157,20 +158,35 @@ public class ManuCar : MonoBehaviour
         // Handle Forward and Reverse forces
         //Debug.Log(Mathf.Abs(thrust));
 
-        if (Mathf.Abs(thrust) > 0)
+        if (thrust > 0)
         {
             body.AddForce(transform.forward * thrust);
+            torque = turnValue * turnStrength;
+
         }
-        // Handle Turn forces
-        if (turnValue > 0)
+        else
         {
-            Vector3 torque = Vector3.up * turnValue * turnStrength;
-            body.AddRelativeTorque(torque);
+            body.AddForce(transform.forward * thrust);
+            torque = -turnValue * turnStrength;
+            
+        }
+
+        Debug.Log(turnValue);
+
+        // Handle Turn forces
+        if (turnValue > 0 || turnValue == 0)
+        {
+            Debug.Log(torque);
+            Vector3 m_EulerAngleVelocity = new Vector3(0, torque, 0);
+            Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
+            body.MoveRotation(body.rotation * deltaRotation);
         }
         else if (turnValue < 0)
         {
-            Vector3 torque = Vector3.up * turnValue * turnStrength;
-            body.AddRelativeTorque(torque);
+            Debug.Log(torque);
+            Vector3 m_EulerAngleVelocity = new Vector3(0, torque, 0);
+            Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
+            body.MoveRotation(body.rotation * deltaRotation);
         }
 
         // Limit max velocity

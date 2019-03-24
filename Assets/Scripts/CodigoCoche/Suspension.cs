@@ -8,9 +8,9 @@ public class Suspension : MonoBehaviour
     private GameObject rueda; //posicion de la rueda alrededor del coche (local es el coche)
     private Transform ruedaTransform;
 
-    public float gravityForce = 20f;
+    public float gravityForce = 1000f;
     private float hoverForce = 380f;
-    public float hoverHeight = 0.5f;
+    public float hoverHeight = 0.2f;
     float hoverDamp = 10f;
 
     public bool grounded;
