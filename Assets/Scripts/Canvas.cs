@@ -66,7 +66,7 @@ public class Canvas : MonoBehaviour
         objRan.sprite = listSprite[n];
     }
 
-    public int comprobarNitro()
+    public int comprobarNitroVacio()
     {
         if(tNitro.sprite == nitroVacio)
         {
@@ -88,13 +88,59 @@ public class Canvas : MonoBehaviour
 
         return 0;
     }
-    
+
+    public int comprobarNitroLleno()
+    {
+        if (pNitro.sprite == nitroLleno)
+        {
+            //está lleno, envíamos un 1
+            //comprobamos el siguiente 
+            return 1;
+        }
+        else if (sNitro.sprite == nitroLleno)
+        {
+            //está lleno, envíamos un 2
+            //comprobamos el siguiente
+            return 2;
+        }
+        else if (tNitro.sprite == nitroLleno)
+        {
+            // está lleno, envíamos un 3
+            return 3;
+        }
+
+        return 4;
+    }
+
+    public void vaciarNitro(int n)
+    {
+        // si n = 1
+        // vaciamos solamente el primer nitro
+        if (n == 1)
+        {
+            pNitro.sprite = nitroVacio;
+        }
+
+        // si n = 2
+        // vaciamos solamente el segundo nitro
+        if (n == 2)
+        {
+            sNitro.sprite = nitroVacio;
+        }
+
+        // si n = 3
+        // vaciamos solamente el tercer nitro
+        if (n == 3)
+        {
+            tNitro.sprite = nitroVacio;
+        }
+    }
 
     public void llenarNitro(int n)
     {
-       // si n = 1
-       // llenamos solamente el primer nitro
-       if(n == 1)
+        // si n = 1
+        // llenamos solamente el primer nitro
+        if(n == 1)
         {
             pNitro.sprite = nitroLleno;
         }

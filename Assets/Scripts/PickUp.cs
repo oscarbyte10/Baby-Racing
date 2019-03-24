@@ -35,9 +35,9 @@ public class PickUp : MonoBehaviour
             // destruimos el objeto
             Destroy(this);
 
-            if(c.comprobarNitro() > 0)
+            if(c.comprobarNitroVacio() > 0)
             {
-                c.llenarNitro(c.comprobarNitro());
+                c.llenarNitro(c.comprobarNitroVacio());
             }
         }
 

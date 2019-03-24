@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Conducir : MonoBehaviour
 {
+    // HUD del jugador
+    private Canvas c = new Canvas();
 
     public float enginePower = 150.0f;
     public float power = 0.0f;
@@ -22,13 +24,26 @@ public class Conducir : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = new Vector3(0.0f, -0.1f, 0.3f);
-
+        c = GameObject.Find("Canvas").GetComponent<Canvas>();
         Debug.Log("Inicio");
 
     }
 
     void Update()
     {
+
+        if(Input.GetKey("left shift"))
+        {
+            // Añade velocidad a la variable velocity 
+            velocity += 500.0f; 
+
+            // Quita nitro al biberón del HUD del jugador
+            if(c.comprobarNitroLleno() <= 3)
+            {
+                c.vaciarNitro(c.comprobarNitroLleno());
+            }
+            
+        }
 
         power = Input.GetAxis("Vertical") * enginePower * Time.deltaTime * velocity;
         steer = Input.GetAxis("Horizontal") * maxSteer;
@@ -60,5 +75,7 @@ public class Conducir : MonoBehaviour
 
 
     }
+
+   
 
 }
