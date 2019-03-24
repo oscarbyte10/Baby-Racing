@@ -5,31 +5,35 @@ using UnityEngine.UI;
 
 public class Canvas : MonoBehaviour
 {
-    public GameObject objRan;
-    public GameObject position;
-    public GameObject mapa;
-    public GameObject nitro;
-    private Material m;
+    // Objetos que componen el Canvas
+    public Image objRan;
+    public Text position;
+    // public GameObject mapa;
+    // public GameObject nitro;
     //Sprites in random box
     public Sprite bib;
     public Sprite ball;
+    public Sprite pacifier;
+    public Sprite fbottle;
     // List for Sprites
     private List<Sprite> listSprite = new List<Sprite>();
-    // 
-    private Image image;
-    //
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
-        image = GetComponent<Image>();
         addInList();
+        //objRan.sprite = bib;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*if(Input.GetKey("space"))
+        {
+            chooseRandomSprite(1);
+        }*/
         
     }
 
@@ -38,6 +42,8 @@ public class Canvas : MonoBehaviour
     {
         listSprite.Add(bib);
         listSprite.Add(ball);
+        listSprite.Add(pacifier);
+        listSprite.Add(fbottle);
     }
 
     //Add function calculate random number and it's choose in list with index
@@ -46,6 +52,6 @@ public class Canvas : MonoBehaviour
         Debug.Log("El número es:" +n);
 
         // Choose in list with index
-        //image.sprite = listSprite[n];
+        objRan.sprite = listSprite[n];
     }
 }

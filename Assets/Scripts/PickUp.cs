@@ -10,11 +10,13 @@ public class PickUp : MonoBehaviour
     private float waitTime = 6.0f;
     private float time = 0.0f;
 
+    // Canvas
     private Canvas c = new Canvas();
+
     // Start is called before the first frame update
     void Start()
     {
-        c = GetComponent<Canvas>();
+        c = GameObject.Find("Canvas").GetComponent<Canvas>();
     }
 
     // Update is called once per frame
@@ -40,7 +42,7 @@ public class PickUp : MonoBehaviour
 
             System.Random rnd = new System.Random();
 
-            int n = rnd.Next(0, 1);
+            int n = rnd.Next(0, 3);
 
 
             //Debug.Log("Número generado es:" + n);
@@ -50,7 +52,8 @@ public class PickUp : MonoBehaviour
              * el objeto será creado por ahora desde aquí.
              * 
              */
-             // no devuelve ningún valor, cambia el sprite de image, desde la clase Canvas
+            // No devuelve ningún valor, cambia el sprite de image, desde la clase Canvas
+            // Choose in list with index
             c.chooseRandomSprite(n);
 
 

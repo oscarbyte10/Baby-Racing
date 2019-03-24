@@ -10,6 +10,7 @@ TagManager:
   - Nitro
   - Mapa
   - Posicion
+  - HUD
   layers:
   - Default
   - TransparentFX
