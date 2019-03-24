@@ -24,7 +24,7 @@ public class ManuCar : MonoBehaviour
 
     private float maxVelocity = 30;
 
-    private float forwardAcceleration = 550f;
+    private float forwardAcceleration = 850f;
     private float reverseAcceleration = 150f;
     float thrust = 0f;
 
@@ -158,7 +158,7 @@ public class ManuCar : MonoBehaviour
         // Handle Forward and Reverse forces
         //Debug.Log(Mathf.Abs(thrust));
 
-        if (thrust > 0)
+        if (thrust >= 0)
         {
             body.AddForce(transform.forward * thrust);
             torque = turnValue * turnStrength;
@@ -168,20 +168,19 @@ public class ManuCar : MonoBehaviour
         {
             body.AddForce(transform.forward * thrust);
             torque = -turnValue * turnStrength;
-            
         }
 
         Debug.Log(turnValue);
 
         // Handle Turn forces
-        if (turnValue > 0 || turnValue == 0)
+        if (turnValue > 0)
         {
             Debug.Log(torque);
             Vector3 m_EulerAngleVelocity = new Vector3(0, torque, 0);
             Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
             body.MoveRotation(body.rotation * deltaRotation);
         }
-        else if (turnValue < 0)
+        else if (turnValue < 0 )
         {
             Debug.Log(torque);
             Vector3 m_EulerAngleVelocity = new Vector3(0, torque, 0);
