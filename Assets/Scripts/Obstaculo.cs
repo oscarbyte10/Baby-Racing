@@ -6,7 +6,7 @@ public class Obstaculo : MonoBehaviour
 {
 
     // Creamos la variable de la clase de script que vamos a coger variables
-    private Conducir obj;
+    private ConducirAnt obj;
     
     private float p = 0;
     // Start is called before the first frame update
@@ -29,7 +29,7 @@ public class Obstaculo : MonoBehaviour
         {
             //Ejemplo 1 ----------------------------------
             // Cogemos el objeto, y lo metemos en el objeto
-            obj = other.gameObject.GetComponent<Conducir>();
+            obj = other.gameObject.GetComponent<ConducirAnt>();
             // Sacamos las variables de el objeto
             p = obj.velocity;
             p = p + 5000;
