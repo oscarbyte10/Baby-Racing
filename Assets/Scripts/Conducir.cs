@@ -33,7 +33,7 @@ public class ConducirAnt : MonoBehaviour
         power = Input.GetAxis("Vertical") * enginePower * Time.deltaTime * velocity;
         steer = Input.GetAxis("Horizontal") * maxSteer;
 
-        brake = Input.GetKey("space") ? rb.mass * 0.1f : 0.0f;
+        brake = Input.GetKey("space") ? rb.mass * 0.1f : 0.0f; 
 
         FrontLeft.steerAngle = steer;
         FrontRight.steerAngle = steer;

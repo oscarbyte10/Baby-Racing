@@ -33,6 +33,8 @@ public class PickUp : MonoBehaviour
 
             if(this.gameObject.CompareTag("Nitro"))
             {
+                int num = c.comprobarNitroVacio();
+                c.llenarNitro(num);
 
             }else
             {
@@ -41,19 +43,18 @@ public class PickUp : MonoBehaviour
                 int num = rand.Next(0,3);
                 //
                 c.chooseRandomSprite(num);
-                
-                // para destruir inmediatamente 
-                // DestroyInmediate
-                // destruye el objeto en el siguiente loop
-                Destroy(gameObject);
-
-                // Instanciar un gameObject
-                // posición en el que quiero que se cree
-                // rotación en la que quiero que aparezca
-                // Quaternion.identity tiene el giro 0, es decir, el que tiene el objeto fx
-                Instantiate(fx, transform.position, Quaternion.identity);
             }
-            
+
+            // para destruir inmediatamente 
+            // DestroyInmediate
+            // destruye el objeto en el siguiente loop
+            Destroy(gameObject);
+
+            // Instanciar un gameObject
+            // posición en el que quiero que se cree
+            // rotación en la que quiero que aparezca
+            // Quaternion.identity tiene el giro 0, es decir, el que tiene el objeto fx
+            Instantiate(fx, transform.position, Quaternion.identity);
         }
 
     }
