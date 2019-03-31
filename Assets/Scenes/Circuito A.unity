@@ -749,7 +749,7 @@ Transform:
   m_GameObject: {fileID: 1153418794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.68, z: 0}
-  m_LocalScale: {x: 2.5, y: 4.5, z: 1}
+  m_LocalScale: {x: 3, y: 6, z: 1.5}
   m_Children: []
   m_Father: {fileID: 379496221}
   m_RootOrder: 5
@@ -1360,7 +1360,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604804477}
-  m_LocalRotation: {x: 0.04273493, y: 0.69560516, z: -0.041520696, w: 0.7159492}
+  m_LocalRotation: {x: 0.042735264, y: 0.69559836, z: -0.041520234, w: 0.71595585}
   m_LocalPosition: {x: 11.89, y: 3.03, z: 6.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1574,7 +1574,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840894371}
-  m_LocalRotation: {x: 0.04273493, y: 0.69560516, z: -0.041520696, w: 0.7159492}
+  m_LocalRotation: {x: 0.042735264, y: 0.69559836, z: -0.041520234, w: 0.71595585}
   m_LocalPosition: {x: 11.89, y: 3.03, z: 6.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1747,10 +1747,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6760739968172843111, guid: 31856dc14881e734e945cdbc45eb9c05,
+    - target: {fileID: 393051943210385004, guid: 31856dc14881e734e945cdbc45eb9c05,
         type: 3}
-      propertyPath: m_Name
-      value: FilaPickUpFin
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 393051943210385004, guid: 31856dc14881e734e945cdbc45eb9c05,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 393051943210385004, guid: 31856dc14881e734e945cdbc45eb9c05,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916481451060274813, guid: 31856dc14881e734e945cdbc45eb9c05,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916481451060274813, guid: 31856dc14881e734e945cdbc45eb9c05,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916481451060274813, guid: 31856dc14881e734e945cdbc45eb9c05,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2420338593841598609, guid: 31856dc14881e734e945cdbc45eb9c05,
         type: 3}
@@ -1807,20 +1832,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 393051943210385004, guid: 31856dc14881e734e945cdbc45eb9c05,
+    - target: {fileID: 6760739968172843111, guid: 31856dc14881e734e945cdbc45eb9c05,
         type: 3}
-      propertyPath: m_Size.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 393051943210385004, guid: 31856dc14881e734e945cdbc45eb9c05,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 393051943210385004, guid: 31856dc14881e734e945cdbc45eb9c05,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.5
+      propertyPath: m_Name
+      value: FilaPickUpFin
       objectReference: {fileID: 0}
     - target: {fileID: 3561043906444774218, guid: 31856dc14881e734e945cdbc45eb9c05,
         type: 3}
@@ -1848,21 +1863,6 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3883050632927948676, guid: 31856dc14881e734e945cdbc45eb9c05,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1916481451060274813, guid: 31856dc14881e734e945cdbc45eb9c05,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1916481451060274813, guid: 31856dc14881e734e945cdbc45eb9c05,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1916481451060274813, guid: 31856dc14881e734e945cdbc45eb9c05,
         type: 3}
       propertyPath: m_Size.z
       value: 0.5
