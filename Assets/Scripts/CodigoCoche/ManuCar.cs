@@ -157,6 +157,7 @@ public class ManuCar : MonoBehaviour
 
         // Handle Forward and Reverse forces
         //Debug.Log(Mathf.Abs(thrust));
+        Debug.Log(transform.localPosition);
 
         if (thrust >= 0)
         {
@@ -168,6 +169,14 @@ public class ManuCar : MonoBehaviour
         {
             body.AddForce(transform.forward * thrust);
             torque = -turnValue * turnStrength;
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Vector3 forward = transform.forward;
+            forward.y = 0;
+
+            body.AddForce(forward * 100, ForceMode.Impulse); //aplicar impulso hacia delante local
         }
 
         Debug.Log(turnValue);
