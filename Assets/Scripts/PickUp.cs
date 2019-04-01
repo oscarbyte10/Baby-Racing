@@ -8,18 +8,21 @@ public class PickUp : MonoBehaviour
     public Transform fx;
     private float waitTime = 6.0f;
     private float time = 0.0f;
+
+    private GameObject obj;
+    private Canvas c;
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+        obj = GameObject.Find("HUD");
+        c = obj.GetComponent<Canvas>();
     }
 
     // Update is called once per frame
     void Update()
     {
         // Mira en bucle si el pickUp debe ser creado otra vez
-        crearPickUpASeisSegundos(gameObject);
+        //crearPickUpASeisSegundos(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,6 +30,21 @@ public class PickUp : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
+
+            if(this.gameObject.CompareTag("Nitro"))
+            {
+                int num = c.comprobarNitroVacio();
+                c.llenarNitro(num);
+
+            }else
+            {
+                // Genera un número random y elige uná imagen al azar que mostrara
+                System.Random rand = new System.Random();
+                int num = rand.Next(0,3);
+                //
+                c.chooseRandomSprite(num);
+            }
+
             // para destruir inmediatamente 
             // DestroyInmediate
             // destruye el objeto en el siguiente loop

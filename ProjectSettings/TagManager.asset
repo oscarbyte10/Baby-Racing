@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Obstaculo
   - Acelerador
+  - CuadroObjeto
+  - Nitro
+  - Mapa
+  - Posicion
+  - HUD
   layers:
   - Default
   - TransparentFX
@@ -16,7 +21,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
+  - Minimapa
   - 
   - 
   - 

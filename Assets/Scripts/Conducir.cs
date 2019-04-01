@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Conducir : MonoBehaviour
+public class ConducirAnt : MonoBehaviour
 {
 
     public float enginePower = 150.0f;
@@ -33,7 +33,7 @@ public class Conducir : MonoBehaviour
         power = Input.GetAxis("Vertical") * enginePower * Time.deltaTime * velocity;
         steer = Input.GetAxis("Horizontal") * maxSteer;
 
-        brake = Input.GetKey("space") ? rb.mass * 0.1f : 0.0f;
+        brake = Input.GetKey("space") ? rb.mass * 0.1f : 0.0f; 
 
         FrontLeft.steerAngle = steer;
         FrontRight.steerAngle = steer;
