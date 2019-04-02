@@ -29,13 +29,13 @@ public class MenuPausa : MonoBehaviour
     }
     
 
-    public void activarMenu()
+    void activarMenu()
     {
         Time.timeScale = 0;
         pausaMenuUI.SetActive(true);
     }
 
-    public void desactivarMenu()
+    void desactivarMenu()
     {
         Time.timeScale = 1;
         pausaMenuUI.SetActive(false);
