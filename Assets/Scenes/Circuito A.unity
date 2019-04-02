@@ -2276,6 +2276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pelota
       objectReference: {fileID: 0}
+    - target: {fileID: 1611363119, guid: 463087514282f4f44bb8b0721c59d204, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1611363122, guid: 463087514282f4f44bb8b0721c59d204, type: 3}
       propertyPath: m_LocalPosition.x
       value: -62.4
@@ -16158,7 +16162,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840894371}
-  m_LocalRotation: {x: 0.04273721, y: 0.6956078, z: -0.041517932, w: 0.71594673}
+  m_LocalRotation: {x: 0.042737212, y: 0.6956077, z: -0.041517917, w: 0.7159468}
   m_LocalPosition: {x: 11.89, y: 3.03, z: 8.440001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -18786,22 +18790,22 @@ PrefabInstance:
     - target: {fileID: 6258432156262273018, guid: 814cc3d30e47ee54ca55e63ca28e9cef,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.04273721
+      value: 0.042737212
       objectReference: {fileID: 0}
     - target: {fileID: 6258432156262273018, guid: 814cc3d30e47ee54ca55e63ca28e9cef,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6956078
+      value: 0.6956077
       objectReference: {fileID: 0}
     - target: {fileID: 6258432156262273018, guid: 814cc3d30e47ee54ca55e63ca28e9cef,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.041517932
+      value: -0.041517917
       objectReference: {fileID: 0}
     - target: {fileID: 6258432156262273018, guid: 814cc3d30e47ee54ca55e63ca28e9cef,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.71594673
+      value: 0.7159468
       objectReference: {fileID: 0}
     - target: {fileID: 6258432156262273018, guid: 814cc3d30e47ee54ca55e63ca28e9cef,
         type: 3}
