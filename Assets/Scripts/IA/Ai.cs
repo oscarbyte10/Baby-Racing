@@ -2,24 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ManuCar : MonoBehaviour
+public class Ai : MonoBehaviour
 {
 
-    /*
-    public float aceleracion = 20f;
-    public float velocidadMax = 100f;
-    public Rigidbody coche;
-    */
-
-    //--------RAYCAST--------
-    //public float hoverForce = 1000;
-    //public float gravityForce = 500f;
-    //public float hoverHeight = 1.5f;
-    //--------RAYCAST--------
+    //--------WAYPOINT--------
+    public GameObject waypointContainer;
+    public Transform[] waypoints = new Transform[2];
+    private int currentWaypoint = 0;
+    //--------CAR-----------
+    Vector3 m_EulerAngleVelocity;
+    public GameObject frontLeft;
+    public GameObject frontRight;
+    public float speed = 100;
+    public float maxSteerAngle = 30;
+    private bool hasWheelContact = false;
+    private float motorForce = 0;
+    private float steerAngle = 0;
 
     //--------MOVEMENT--------
     float deadZone = 0.1f;
-
+    //
     public float groundedDrag = 3f;
 
     private float maxVelocity = 30;
@@ -53,14 +55,24 @@ public class ManuCar : MonoBehaviour
     public Transform rearRightWheel;*/
     //--------GAMEOBJECTS--------
 
-    // Objetos para el canvas
-    private GameObject obj;
-    private Canvas c;
+    // -- Crear el array de los waypoints a partir de los hijos del objeto WayPoints
+    void GetWaypoints()
+    {
+        Transform[] potencialWaypoints = waypointContainer.GetComponentsInChildren<Transform>();
+        waypoints = new Transform[potencialWaypoints.Length - 1];
+        // Quita el padre de los waypoint
+        int i = 0;
+        foreach (Transform potencialWaypoint in potencialWaypoints)
+            if (potencialWaypoint != waypointContainer.transform)
+                waypoints[i++] = potencialWaypoint;
+        Debug.Log("Waypoints creados: "+i);
+        //Debug.Log(waypoints[i]);
+    }
+
     void Start()
     {
-        // --- Hacemos referencia a la función canvas para saber si tenemos el nitro lleno o no ---
-        obj = GameObject.Find("HUD");
-        c = obj.GetComponent<Canvas>();
+        // -- Creamos array de waypoints
+        //GetWaypoints();
 
         //coche = GetComponent<Rigidbody>();
 
@@ -83,36 +95,36 @@ public class ManuCar : MonoBehaviour
 
     void FixedUpdate()
     {
-        /*
- 
-        //Vector3 fuerza = new Vector3(0.0f, 1.0f, 0.0f); //aplicar fuerza hacia arriba.
-        Vector3 fuerza = new Vector3(0.0f, 0.0f, 1.0f); //aplicar fuerza hacia delante.
 
-        var velVector = coche.velocity; //recoge la velocidad del rigidbody en forma de vector
-        float velActual = velVector.magnitude; //recoge la longitud del vector velocidad (el modulo)
-
-        Debug.Log(velVector);
-
-        //Debug.Log(velActual);
-
-        if (Input.GetKey(KeyCode.W))
+        /*if (currentWaypoint >= waypoints.Length)
         {
-            if (velActual < velocidadMax)
-            {
-                coche.AddForce(fuerza * aceleracion, ForceMode.Impulse);
-            }
-        }
-        */
+            currentWaypoint = 0;
+        }*/
+
+        
+
+        Vector3 newPos = Vector3.MoveTowards(body.transform.position, waypoints[currentWaypoint].position, speed * Time.deltaTime);
+        body.MovePosition(newPos);
+        currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
+       /* if()
+        {
+            m_EulerAngleVelocity = new Vector3(0, 100, 0);
+            Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
+            body.MoveRotation(body.rotation * deltaRotation);
+        }*/
+        
+        // Si suma una y al dividirlo entre la longitud del array el resto da 0 es que ha llegado al final del array y vuelve a empezar
 
 
         //--------MOVEMENT--------
         // Main Thrust
-        thrust = 0.0f;
-        float acceleration = Input.GetAxis("Vertical");
+        //thrust = 0.0f;
+        //float acceleration = Input.GetAxis("Vertical");
 
+        //frontLeft.transform.localEulerAngles = new Vector3(0, steerAngle * maxSteerAngle, 0);
+        //frontRight.transform.localEulerAngles = new Vector3(0, steerAngle * maxSteerAngle, 0);
 
-
-        if (acceleration > deadZone)
+        /*if (acceleration > deadZone)
             thrust = acceleration * forwardAcceleration;
         else if (acceleration < -deadZone)
             thrust = acceleration * reverseAcceleration;
@@ -120,16 +132,8 @@ public class ManuCar : MonoBehaviour
         // Turning
         turnValue = 0.0f;
         float turnAxis = Input.GetAxis("Horizontal");
-        if (Mathf.Abs(turnAxis) > deadZone /*&& body.velocity.sqrMagnitude > 5f*/)
+        if (Mathf.Abs(turnAxis) > deadZone)
             turnValue = turnAxis;
-
-
-        //anim.SetFloat("giro", turnValue); //al giro del animator
-
-        //--------MOVEMENT--------
-
-
-
         //--------MOVEMENT--------
 
         //var emissionRate = 0;
@@ -176,20 +180,13 @@ public class ManuCar : MonoBehaviour
             torque = -turnValue * turnStrength;
         }
 
-        // Comprobaremos el nitro una vez le de a la tecla shift
+        
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            // Si el nitro no está lleno no se le añadira el impulso aunque le de a la tecla Shift
-            if(c.comprobarNitroLleno() != 0)
-            {
-                // Si esta lleno vaciara el nitro en el CANVAS y le añade el impulso
-                c.vaciarNitro(c.comprobarNitroLleno());
-                Vector3 forward = transform.forward;
-                forward.y = 0;
+            Vector3 forward = transform.forward;
+            forward.y = 0;
 
-                body.AddForce(forward * 100, ForceMode.Impulse); //aplicar impulso hacia delante local
-            }
-            
+            body.AddForce(forward * 100, ForceMode.Impulse); //aplicar impulso hacia delante local
         }
 
         Debug.Log(turnValue);
@@ -202,7 +199,7 @@ public class ManuCar : MonoBehaviour
             Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
             body.MoveRotation(body.rotation * deltaRotation);
         }
-        else if (turnValue < 0 )
+        else if (turnValue < 0)
         {
             Debug.Log(torque);
             Vector3 m_EulerAngleVelocity = new Vector3(0, torque, 0);
@@ -214,8 +211,39 @@ public class ManuCar : MonoBehaviour
         if (body.velocity.sqrMagnitude > (body.velocity.normalized * maxVelocity).sqrMagnitude)
         {
             body.velocity = body.velocity.normalized * maxVelocity;
-        }
+        }*/
         //--------MOVEMENT--------
 
     }
+    // Funcion para que el IA vaya de un punto a otro
+    /*void NavigateTowardsWaypoint()
+    {
+
+        //Obaservamos si se crea bien la RUTA
+        //Debug.Log(currentWaypoint);
+
+        Vector3 RelativeWaypointPosition = transform.InverseTransformPoint(new Vector3(
+                                                                            waypoints[currentWaypoint].position.x,
+                                                                            transform.position.y,
+                                                                            waypoints[currentWaypoint].position.z));
+
+        steerAngle = RelativeWaypointPosition.x / RelativeWaypointPosition.magnitude;
+
+        // El coche frena en las curvas.
+        if (steerAngle < 0.5f)
+        {
+            motorForce = RelativeWaypointPosition.z / RelativeWaypointPosition.magnitude - Mathf.Abs(steerAngle);
+        }
+        else
+            motorForce = 0;
+
+        if (RelativeWaypointPosition.magnitude < 20)
+        {
+            currentWaypoint++;
+            if (currentWaypoint >= waypoints.Length)
+                currentWaypoint = 0;
+        }
+
+    }*/
+    
 }

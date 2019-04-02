@@ -44,6 +44,7 @@ public class Canvas : MonoBehaviour
         if(Input.GetKey("left shift"))
         {
             // Función nitro, vaciar
+            
         }
         
     }
@@ -109,7 +110,7 @@ public class Canvas : MonoBehaviour
             return 3;
         }
 
-        return 4;
+        return 0;
     }
 
     public void vaciarNitro(int n)

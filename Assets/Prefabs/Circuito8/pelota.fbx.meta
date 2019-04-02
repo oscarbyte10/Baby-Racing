@@ -1,113 +1,19 @@
 fileFormatVersion: 2
-guid: 965f72a0ff4d620408a4b989b7fc3966
+guid: 260a0aaa03825114a84c857c18364628
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: curva 1
-    100004: curva 2
-    100006: curva 3
-    100008: curva 4
-    100010: curva 5
-    100012: curva 6
-    100014: recta 10
-    100016: recta 3
-    100018: recta 4
-    100020: recta 5
-    100022: recta 6
-    100024: recta 7
-    100026: recta 8
-    100028: recta 9
-    100030: recta salida
-    100032: recta002
-    100034: recta2
     400000: //RootNode
-    400002: curva 1
-    400004: curva 2
-    400006: curva 3
-    400008: curva 4
-    400010: curva 5
-    400012: curva 6
-    400014: recta 10
-    400016: recta 3
-    400018: recta 4
-    400020: recta 5
-    400022: recta 6
-    400024: recta 7
-    400026: recta 8
-    400028: recta 9
-    400030: recta salida
-    400032: recta002
-    400034: recta2
-    2100000: No Name
-    2300000: curva 1
-    2300002: curva 2
-    2300004: curva 3
-    2300006: curva 4
-    2300008: curva 5
-    2300010: curva 6
-    2300012: recta 10
-    2300014: recta 3
-    2300016: recta 4
-    2300018: recta 5
-    2300020: recta 6
-    2300022: recta 7
-    2300024: recta 8
-    2300026: recta 9
-    2300028: recta salida
-    2300030: recta002
-    2300032: recta2
-    3300000: curva 1
-    3300002: curva 2
-    3300004: curva 3
-    3300006: curva 4
-    3300008: curva 5
-    3300010: curva 6
-    3300012: recta 10
-    3300014: recta 3
-    3300016: recta 4
-    3300018: recta 5
-    3300020: recta 6
-    3300022: recta 7
-    3300024: recta 8
-    3300026: recta 9
-    3300028: recta salida
-    3300030: recta002
-    3300032: recta2
-    4300000: recta 6
-    4300002: curva 3
-    4300004: recta salida
-    4300006: recta002
-    4300008: curva 2
-    4300010: curva 1
-    4300012: curva 6
-    4300014: curva 5
-    4300016: recta 9
-    4300018: curva 4
-    4300020: recta 7
-    4300022: recta 8
-    4300024: recta2
-    4300026: recta 3
-    4300028: recta 4
-    4300030: recta 5
-    4300032: recta 10
-    6400000: curva 1
-    6400002: curva 2
-    6400004: curva 3
-    6400006: curva 4
-    6400008: curva 5
-    6400010: curva 6
-    6400012: recta 10
-    6400014: recta 3
-    6400016: recta 4
-    6400018: recta 5
-    6400020: recta 6
-    6400022: recta 7
-    6400024: recta 8
-    6400026: recta 9
-    6400028: recta salida
-    6400030: recta002
-    6400032: recta2
+    2100000: 02 - Default
+    2100002: 08 - Default
+    2100004: 03 - Default
+    2100006: 01 - Default
+    2100008: 07 - Default
+    2100010: 'Material #26'
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Sphere001
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -141,7 +47,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
