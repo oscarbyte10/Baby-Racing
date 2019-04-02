@@ -106,12 +106,12 @@ public class Ai : MonoBehaviour
         Vector3 newPos = Vector3.MoveTowards(body.transform.position, waypoints[currentWaypoint].position, speed * Time.deltaTime);
         body.MovePosition(newPos);
         currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
-        if()
+       /* if()
         {
             m_EulerAngleVelocity = new Vector3(0, 100, 0);
             Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
             body.MoveRotation(body.rotation * deltaRotation);
-        }
+        }*/
         
         // Si suma una y al dividirlo entre la longitud del array el resto da 0 es que ha llegado al final del array y vuelve a empezar
 
