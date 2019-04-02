@@ -53,10 +53,15 @@ public class ManuCar : MonoBehaviour
     public Transform rearRightWheel;*/
     //--------GAMEOBJECTS--------
 
-
-
+    // Objetos para el canvas
+    private GameObject obj;
+    private Canvas c;
     void Start()
     {
+        // --- Hacemos referencia a la función canvas para saber si tenemos el nitro lleno o no ---
+        obj = GameObject.Find("HUD");
+        c = obj.GetComponent<Canvas>();
+
         //coche = GetComponent<Rigidbody>();
 
         //--------GAMEOBJECTS--------
@@ -171,12 +176,20 @@ public class ManuCar : MonoBehaviour
             torque = -turnValue * turnStrength;
         }
 
+        // Comprobaremos el nitro una vez le de a la tecla shift
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            Vector3 forward = transform.forward;
-            forward.y = 0;
+            // Si el nitro no está lleno no se le añadira el impulso aunque le de a la tecla Shift
+            if(c.comprobarNitroLleno() != 0)
+            {
+                // Si esta lleno vaciara el nitro en el CANVAS y le añade el impulso
+                c.vaciarNitro(c.comprobarNitroLleno());
+                Vector3 forward = transform.forward;
+                forward.y = 0;
 
-            body.AddForce(forward * 100, ForceMode.Impulse); //aplicar impulso hacia delante local
+                body.AddForce(forward * 100, ForceMode.Impulse); //aplicar impulso hacia delante local
+            }
+            
         }
 
         Debug.Log(turnValue);
