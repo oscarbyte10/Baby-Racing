@@ -68,7 +68,7 @@ public class RayCoche : MonoBehaviour
         layerMask = 1 << LayerMask.NameToLayer("Vehicle");
         layerMask = ~layerMask;
 
-         Transform hoverPoint1;
+        Transform hoverPoint1;
 
         Vector3 vec = new Vector3(0.5f, 0f, 0f);
 
