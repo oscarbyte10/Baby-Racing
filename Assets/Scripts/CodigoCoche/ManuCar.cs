@@ -60,7 +60,7 @@ public class ManuCar : MonoBehaviour
     {
         // --- Hacemos referencia a la función canvas para saber si tenemos el nitro lleno o no ---
         obj = GameObject.Find("HUD");
-        c = obj.GetComponent<Canvas>();
+        //c = obj.GetComponent<Canvas>();
 
         //coche = GetComponent<Rigidbody>();
 
