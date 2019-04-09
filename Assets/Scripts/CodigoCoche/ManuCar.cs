@@ -16,10 +16,11 @@ public class ManuCar : MonoBehaviour
     //public float gravityForce = 500f;
     //public float hoverHeight = 1.5f;
     //--------RAYCAST--------
-
+    public float Showtime = 0f;
+    public int counter = 5;
     //--------MOVEMENT--------
-    float deadZone = 0.1f;
-
+    private float deadZone = 0.1f;
+    private float acceleration;
     public float groundedDrag = 3f;
 
     private float maxVelocity = 30;
@@ -108,7 +109,7 @@ public class ManuCar : MonoBehaviour
         //--------MOVEMENT--------
         // Main Thrust
         thrust = 0.0f;
-        float acceleration = Input.GetAxis("Vertical");
+        acceleration = Input.GetAxis("Vertical");
 
 
 
@@ -136,7 +137,7 @@ public class ManuCar : MonoBehaviour
         Suspension rueda; //referencia a la clase suspension
         rueda = gameObject.GetComponentInChildren<Suspension>(); //referencia  a la instancia particular/local de la clase suspension de cada rueda
 
-        Debug.Log(rueda.grounded);
+        //Debug.Log(rueda.grounded);
 
         if (rueda.grounded == true)
         {
@@ -162,7 +163,7 @@ public class ManuCar : MonoBehaviour
 
         // Handle Forward and Reverse forces
         //Debug.Log(Mathf.Abs(thrust));
-        Debug.Log(transform.localPosition);
+        //Debug.Log(transform.localPosition);
 
         if (thrust >= 0)
         {
@@ -179,32 +180,40 @@ public class ManuCar : MonoBehaviour
         // Comprobaremos el nitro una vez le de a la tecla shift
         if (Input.GetKey(KeyCode.LeftShift))
         {
+            //MATTHEW WAS HERE
             // Si el nitro no está lleno no se le añadira el impulso aunque le de a la tecla Shift
-            if(c.comprobarNitroLleno() != 0)
+            if (c.comprobarNitroLleno() != 0)
             {
+
                 // Si esta lleno vaciara el nitro en el CANVAS y le añade el impulso
                 c.vaciarNitro(c.comprobarNitroLleno());
-                Vector3 forward = transform.forward;
-                forward.y = 0;
-
-                body.AddForce(forward * 100, ForceMode.Impulse); //aplicar impulso hacia delante local
+                Showtime = 0.8f;
+                counter = counter - 1;
             }
             
         }
 
-        Debug.Log(turnValue);
+        if (Showtime > 0f)
+        {
+            Showtime = Showtime - (Time.deltaTime);
+            Vector3 forward = transform.forward;
+            forward.y = 0f;
+            body.AddForce(forward * 40, ForceMode.Impulse); //aplicar impulso hacia delante local
+        }
+        
+        //Debug.Log(turnValue);
 
         // Handle Turn forces
         if (turnValue > 0)
         {
-            Debug.Log(torque);
+            //Debug.Log(torque);
             Vector3 m_EulerAngleVelocity = new Vector3(0, torque, 0);
             Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
             body.MoveRotation(body.rotation * deltaRotation);
         }
         else if (turnValue < 0 )
         {
-            Debug.Log(torque);
+            //Debug.Log(torque);
             Vector3 m_EulerAngleVelocity = new Vector3(0, torque, 0);
             Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
             body.MoveRotation(body.rotation * deltaRotation);
@@ -217,5 +226,51 @@ public class ManuCar : MonoBehaviour
         }
         //--------MOVEMENT--------
 
+    }
+    /*
+     * MATTHEW WAS HERE!!
+     */
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Acelerador"))
+        {
+
+
+            Showtime = 5f;
+            counter = counter - 1;
+
+            if (Showtime > 0f)
+            {
+                Showtime = Showtime - (Time.deltaTime);
+                Vector3 forward = transform.forward;
+                forward.y = 0f;
+                body.AddForce(forward * 30, ForceMode.Impulse); //aplicar impulso hacia delante local
+            }
+            
+
+        }else if(other.gameObject.CompareTag("Charco"))
+        {
+            //Debug.Log("Charco de barro");
+            
+            Showtime = 5f;
+            counter = counter - 1;
+
+            if (Showtime > 0f)
+            {
+                // Lo para durante unos segundos
+                
+                // Añadimos animación durante esos segundos
+                Showtime = Showtime - (Time.deltaTime);
+                // nota: hacer animación en la que rueden las ruedas del coche y salpique barro a la pantalla del jugador
+                
+            }
+            else
+            {
+                Debug.Log("Se acabo el tiempo, Go!!");
+                Vector3 forward = transform.forward;
+                forward.y = 0f;
+                body.AddForce(forward * 30, ForceMode.Acceleration); //aplicar impulso hacia delante local
+            }
+        }
     }
 }

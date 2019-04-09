@@ -12,6 +12,7 @@ TagManager:
   - Posicion
   - HUD
   - Waypoint
+  - Charco
   layers:
   - Default
   - TransparentFX
