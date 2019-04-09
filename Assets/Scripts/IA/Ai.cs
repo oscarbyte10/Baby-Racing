@@ -10,22 +10,11 @@ public class Ai : MonoBehaviour
     private Transform[] waypoints;
     private int currentWaypoint = 0;
     private bool contact = false;
-    //--------CAR-----------
-    Vector3 m_EulerAngleVelocity;
-    public GameObject frontLeft;
-    public GameObject frontRight;
     public float speed = 100;
-    public float maxSteerAngle = 30;
-    private bool hasWheelContact = false;
-    private float motorForce = 0;
-    private float steerAngle = 0;
-    //--------GAMEOBJECTS--------
-    int layerMask;
+
+
     Rigidbody body;
 
-    public ParticleSystem[] dustTrails = new ParticleSystem[2];
-
-    public Transform[] wheelTransform = new Transform[4]; //these are the transforms for our 4 wheels
 
     //--------GAMEOBJECTS--------
 
@@ -53,10 +42,6 @@ public class Ai : MonoBehaviour
         //--------GAMEOBJECTS--------
         body = GetComponent<Rigidbody>();
         body.centerOfMass = Vector3.down; //UNO POR DEBAJO DEL VEHICULO, no es realista, pero asi sera dificil que el coche quede boca abajo
-
-        layerMask = 1 << LayerMask.NameToLayer("Vehicle");
-        layerMask = ~layerMask;
-
         //--------GAMEOBJECTS--------
 
     }
@@ -68,14 +53,16 @@ public class Ai : MonoBehaviour
         float angles;
         angles = newPos.x / newPos.magnitude;
         //transform.rotation = Quaternion.Euler(angles);
-        Vector3 relativePos = (waypoints[currentWaypoint].position + new Vector3(0, 1.5f, 0)) - transform.position;
+        Vector3 relativePos = (waypoints[currentWaypoint].position + new Vector3(0, 0.1f, 0)) - transform.position;
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         
         if (contact)
         {
-            //body.AddTorque(relativePos * Time.deltaTime);
+            body.AddTorque(relativePos * Time.deltaTime);
             body.MoveRotation(rotation);
-            currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
+            Debug.Log("CurrentWayPointBefore: " + currentWaypoint);
+            currentWaypoint = (currentWaypoint = currentWaypoint + 1) % waypoints.Length;
+            Debug.Log("CurrentWayPointAfter: " + currentWaypoint);
             contact = false;
         }
 
