@@ -22,7 +22,7 @@ public class ManuCar : MonoBehaviour
 
     public float groundedDrag = 3f;
 
-    private float maxVelocity = 30;
+    private float maxVelocity = 100;
 
     private float forwardAcceleration = 850f;
     private float reverseAcceleration = 150f;
