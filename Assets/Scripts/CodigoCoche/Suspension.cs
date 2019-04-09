@@ -9,9 +9,9 @@ public class Suspension : MonoBehaviour
     private Transform ruedaTransform;
 
     public float gravityForce = 1000f;
-    private float hoverForce = 380f;
+    private float hoverForce = 700f;
     public float hoverHeight = 0.2f;
-    float hoverDamp = 10f;
+    float hoverDamp = 30f;
 
     public bool grounded;
 
@@ -57,8 +57,8 @@ public class Suspension : MonoBehaviour
             float elevacion = compression * hoverForce - upwardSpeed * hoverDamp;
 
             coche.AddForceAtPosition(Vector3.up * elevacion, hoverPoint.transform.position);
-                grounded = true;
-                Debug.DrawRay(hit.point, hit.normal, Color.red);
+            grounded = true;
+            Debug.DrawRay(hit.point, Vector3.up, Color.red);
         }
         else
         {
