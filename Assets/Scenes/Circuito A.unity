@@ -130,6 +130,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (90)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -215,6 +220,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -298,6 +308,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (91)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -384,6 +399,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -462,6 +482,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -543,6 +568,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 381072069}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &57943133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6502374355958958292, guid: 67d87e52fd7284645a17e1dae438cb56,
+    type: 3}
+  m_PrefabInstance: {fileID: 6502374357334343534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &57943134
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57943133}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5408249, y: 0.43184638, z: 0.50683594}
+  m_Center: {x: 0.22958755, y: -0.2840768, z: 0.24658203}
 --- !u!4 &67986219 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
@@ -560,6 +604,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -635,6 +684,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -706,7 +760,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 128786085}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Recta-valla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,6 +861,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (89)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -892,6 +951,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -965,6 +1029,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (82)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -1051,6 +1120,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (95)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1132,7 +1206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 139878471}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Recta-valla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1175,6 +1249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (91)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -1385,6 +1464,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1475,6 +1559,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1553,6 +1642,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -1633,6 +1727,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -1723,6 +1822,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -1852,6 +1956,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (94)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1935,6 +2044,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -2113,6 +2227,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2186,6 +2305,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (82)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -2324,6 +2448,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -10.745001
       objectReference: {fileID: 0}
+    - target: {fileID: 1611363120, guid: 463087514282f4f44bb8b0721c59d204, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f27a2dfcc72f1074f9e5fd3fc4c0b036, type: 2}
+    - target: {fileID: 1611363120, guid: 463087514282f4f44bb8b0721c59d204, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e537d1780c52d847a53d108bcc46a41, type: 2}
+    - target: {fileID: 1611363120, guid: 463087514282f4f44bb8b0721c59d204, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: a8068247297f2114f804d396fe11d4b8, type: 2}
+    - target: {fileID: 1611363120, guid: 463087514282f4f44bb8b0721c59d204, type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: 66dc40ea89370f54ab226cb1b69973a3, type: 2}
+    - target: {fileID: 1611363120, guid: 463087514282f4f44bb8b0721c59d204, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 66dc40ea89370f54ab226cb1b69973a3, type: 2}
+    - target: {fileID: 1611363120, guid: 463087514282f4f44bb8b0721c59d204, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2984d377217e9b34a955411a326f87ef, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 463087514282f4f44bb8b0721c59d204, type: 3}
 --- !u!1001 &227276370
@@ -2337,6 +2485,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (83)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -2423,6 +2576,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2496,6 +2654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -2583,6 +2746,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (85)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2668,6 +2836,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2748,6 +2921,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2821,6 +2999,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -2906,6 +3089,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2985,6 +3173,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3058,6 +3251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -3343,6 +3541,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3422,6 +3625,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -3503,6 +3711,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3581,6 +3794,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -3672,6 +3890,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3755,6 +3978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -3840,6 +4068,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3924,6 +4157,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -4105,6 +4343,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -4347,6 +4590,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4431,6 +4679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -4522,6 +4775,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (90)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4612,6 +4870,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4690,6 +4953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -4873,6 +5141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (77)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4969,6 +5242,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (82)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -5073,6 +5351,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (88)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5163,6 +5446,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5241,6 +5529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -5424,6 +5717,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5503,6 +5801,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (89)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -5589,6 +5892,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5673,6 +5981,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -5770,6 +6083,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5855,6 +6173,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5938,6 +6261,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -6023,6 +6351,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -6114,6 +6447,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6193,6 +6531,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6271,6 +6614,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -6355,6 +6703,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -6447,6 +6800,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (85)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6531,6 +6889,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6604,6 +6967,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -6683,6 +7051,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -6912,6 +7285,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6996,6 +7374,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -7156,6 +7539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7227,7 +7615,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 726740249}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Curva-valla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7296,6 +7684,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -7394,6 +7787,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (93)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7478,6 +7876,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7561,6 +7964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -7647,6 +8055,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7720,6 +8133,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -7806,6 +8224,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7889,6 +8312,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (83)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -7998,6 +8426,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8071,6 +8504,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -8249,6 +8687,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (98)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8347,7 +8790,7 @@ PrefabInstance:
     - target: {fileID: 3030567817305775503, guid: a074383fc9b670b468e0fba09173256e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3030567817305775497, guid: a074383fc9b670b468e0fba09173256e,
         type: 3}
@@ -8479,16 +8922,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypointContainer: {fileID: 958028156}
-  waypoints:
-  - {fileID: 1980676027}
-  - {fileID: 1792954007}
   frontLeft: {fileID: 844783371}
   frontRight: {fileID: 844783370}
   speed: 20
   maxSteerAngle: 30
-  groundedDrag: 3
-  tilt: 0
-  turnValue: 0
   dustTrails:
   - {fileID: 0}
   - {fileID: 0}
@@ -8506,7 +8943,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 851507354}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Recta-valla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8689,6 +9126,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (92)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8780,6 +9222,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8863,6 +9310,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -9041,6 +9493,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9128,7 +9585,7 @@ PrefabInstance:
     - target: {fileID: 4217235609072756749, guid: 7f097437a5fe5004bb650251734c608d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.105
+      value: 1.99
       objectReference: {fileID: 0}
     - target: {fileID: 4217235609072756749, guid: 7f097437a5fe5004bb650251734c608d,
         type: 3}
@@ -9205,6 +9662,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300000, guid: 674aa74eb71508a4e87a1974f4e7fe14, type: 3}
+    - target: {fileID: 4217235609070988013, guid: 7f097437a5fe5004bb650251734c608d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 364154e80ec9b824a836b0c0e882d84c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f097437a5fe5004bb650251734c608d, type: 3}
 --- !u!1001 &943063867
@@ -9218,6 +9680,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -9299,6 +9766,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9377,6 +9849,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -9475,6 +9952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -9630,7 +10112,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6f7824646d428ae4788d2c1ba2ee4c6d, type: 2}
+      objectReference: {fileID: 2100000, guid: 66dc40ea89370f54ab226cb1b69973a3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e41f1964388eb4d4483490cf19741521, type: 3}
 --- !u!1001 &978338356
@@ -9644,6 +10126,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -9832,6 +10319,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9911,6 +10403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (80)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -10002,6 +10499,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10081,6 +10583,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10159,6 +10666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -10354,6 +10866,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10444,6 +10961,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (96)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10533,6 +11055,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (96)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -10635,6 +11162,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (91)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -10873,6 +11405,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (92)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10955,7 +11492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151880029}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Curva-valla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11199,6 +11736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (87)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -11444,6 +11986,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 1977806758, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 541409043, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -11528,6 +12074,182 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 808004179, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 808004179, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016379242, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016379242, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016379242, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -163.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016379242, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.7999878
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016379242, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016379242, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016379242, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016379242, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016379242, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 923190272, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 923190272, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 405946226, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 405946226, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 405946226, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 129
+      objectReference: {fileID: 0}
+    - target: {fileID: 405946226, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -114
+      objectReference: {fileID: 0}
+    - target: {fileID: 878320353, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 878320353, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 878320353, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 51.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 878320353, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 878320353, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 878320353, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 878320353, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 878320353, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 878320353, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518783537, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518783537, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518783537, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518783537, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518783537, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518783537, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518783537, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518783537, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 105.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1518783537, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 685612755, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 685612755, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 685612755, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 158.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 685612755, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 685612755, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 685612755, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 685612755, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 685612755, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 685612755, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52b9b397a5da4d94cb8b8c4a493cadc0, type: 3}
 --- !u!4 &1199078703 stripped
@@ -11553,6 +12275,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -11638,6 +12365,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -11827,6 +12559,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11918,6 +12655,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11996,6 +12738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -12088,6 +12835,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12171,6 +12923,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -12257,6 +13014,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12341,6 +13103,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -12428,6 +13195,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12501,6 +13273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -12580,6 +13357,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (94)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -12664,6 +13446,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -12779,6 +13566,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12858,6 +13650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (90)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -12950,6 +13747,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13038,7 +13840,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1460962949}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Recta-valla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13085,6 +13887,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -13165,6 +13972,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -13250,6 +14062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13328,6 +14145,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -13408,6 +14230,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -13493,6 +14320,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13577,6 +14409,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13655,6 +14492,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (87)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -13740,6 +14582,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13824,6 +14671,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -13955,7 +14807,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534931590}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 27.4, y: 25.8, z: -8.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13972,6 +14824,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -14046,6 +14903,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -14145,6 +15007,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14223,6 +15090,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -14303,6 +15175,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -14486,6 +15363,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (95)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14569,6 +15451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -14661,6 +15548,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14739,6 +15631,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -14916,6 +15813,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15087,6 +15989,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15178,6 +16085,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (84)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15267,6 +16179,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -15504,6 +16421,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15589,6 +16511,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -15684,7 +16611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1738371740}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Media-Valla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15734,6 +16661,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -15890,12 +16822,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a2ce2cc9d1aaaf4419c10822e7bad3c5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3508cb3e6085f564c972add3ef1ff0d9, type: 3}
---- !u!4 &1792954007 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6502374355888763385, guid: 67d87e52fd7284645a17e1dae438cb56,
-    type: 3}
-  m_PrefabInstance: {fileID: 6502374357334343534}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1815861832 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
@@ -15913,6 +16839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -16038,7 +16969,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 46.3
+  field of view: 40
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -16063,8 +16994,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840894371}
-  m_LocalRotation: {x: 0.042737223, y: 0.69560903, z: -0.041517828, w: 0.7159455}
-  m_LocalPosition: {x: 11.89, y: 3.03, z: 8.440001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -16112,6 +17043,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -16197,6 +17133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (89)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16280,6 +17221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -16444,6 +17390,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (93)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16527,6 +17478,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -16614,6 +17570,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (70)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16693,6 +17654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -16778,6 +17744,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -16880,6 +17851,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3030567817305775503, guid: a074383fc9b670b468e0fba09173256e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3030567817305775497, guid: a074383fc9b670b468e0fba09173256e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16979,6 +17955,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17057,6 +18038,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (97)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -17234,7 +18220,7 @@ GameObject:
   - component: {fileID: 1970783720}
   - component: {fileID: 1970783719}
   - component: {fileID: 1970783723}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Acelerador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17332,12 +18318,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 750746531}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1980676027 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6502374355958958293, guid: 67d87e52fd7284645a17e1dae438cb56,
-    type: 3}
-  m_PrefabInstance: {fileID: 6502374357334343534}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1991262067 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
@@ -17355,6 +18335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -17434,6 +18419,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -17519,6 +18509,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17592,6 +18587,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -17672,6 +18672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -17831,6 +18836,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17920,6 +18930,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -18115,6 +19130,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: valla-limitadora (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18205,6 +19225,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -18304,6 +19329,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: valla-limitadora
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043218300372795080, guid: 2a286c71dfe0384468b48e8b2bf662fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7851411850021765889, guid: 2a286c71dfe0384468b48e8b2bf662fe,
         type: 3}
@@ -18435,6 +19465,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6774024956458019465, guid: 75cdef041b09dad4e848c2902afbf6b1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f27a2dfcc72f1074f9e5fd3fc4c0b036, type: 2}
     m_RemovedComponents:
     - {fileID: 8551817608893365341, guid: 75cdef041b09dad4e848c2902afbf6b1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 75cdef041b09dad4e848c2902afbf6b1, type: 3}
@@ -18957,6 +19992,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 106176631464864738, guid: c51e64237de86084cb8b404ed0737931,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f6f06784edcc9f488b32c6d16572d3a, type: 2}
+    - target: {fileID: 924315871128780831, guid: c51e64237de86084cb8b404ed0737931,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0aacf0b5c8851c94ba5ebe8b50d9cccd, type: 2}
+    - target: {fileID: 4228650177379364948, guid: c51e64237de86084cb8b404ed0737931,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0aacf0b5c8851c94ba5ebe8b50d9cccd, type: 2}
+    - target: {fileID: 6942071319908911575, guid: c51e64237de86084cb8b404ed0737931,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0aacf0b5c8851c94ba5ebe8b50d9cccd, type: 2}
+    - target: {fileID: 8195941281353860901, guid: c51e64237de86084cb8b404ed0737931,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0aacf0b5c8851c94ba5ebe8b50d9cccd, type: 2}
+    - target: {fileID: 9154532067323394007, guid: c51e64237de86084cb8b404ed0737931,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b62082af2b0067a40b147c6d4a4ae4f8, type: 2}
+    - target: {fileID: 5180646715999225394, guid: c51e64237de86084cb8b404ed0737931,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b62082af2b0067a40b147c6d4a4ae4f8, type: 2}
     m_RemovedComponents:
     - {fileID: 7678745182574821153, guid: c51e64237de86084cb8b404ed0737931, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c51e64237de86084cb8b404ed0737931, type: 3}
@@ -18985,27 +20055,27 @@ PrefabInstance:
     - target: {fileID: 6258432156262273018, guid: 814cc3d30e47ee54ca55e63ca28e9cef,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.440001
+      value: 13.93
       objectReference: {fileID: 0}
     - target: {fileID: 6258432156262273018, guid: 814cc3d30e47ee54ca55e63ca28e9cef,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.042737223
+      value: 0.04273755
       objectReference: {fileID: 0}
     - target: {fileID: 6258432156262273018, guid: 814cc3d30e47ee54ca55e63ca28e9cef,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.69560903
+      value: 0.6956108
       objectReference: {fileID: 0}
     - target: {fileID: 6258432156262273018, guid: 814cc3d30e47ee54ca55e63ca28e9cef,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.041517828
+      value: -0.041517872
       objectReference: {fileID: 0}
     - target: {fileID: 6258432156262273018, guid: 814cc3d30e47ee54ca55e63ca28e9cef,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7159455
+      value: 0.7159437
       objectReference: {fileID: 0}
     - target: {fileID: 6258432156262273018, guid: 814cc3d30e47ee54ca55e63ca28e9cef,
         type: 3}
@@ -19031,12 +20101,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LookAt
       value: 
-      objectReference: {fileID: 1171193841}
+      objectReference: {fileID: 844783372}
     - target: {fileID: 6258432156262273019, guid: 814cc3d30e47ee54ca55e63ca28e9cef,
         type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 1171193841}
+      objectReference: {fileID: 844783372}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 814cc3d30e47ee54ca55e63ca28e9cef, type: 3}
 --- !u!1001 &6502374357334343534
@@ -19050,6 +20120,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WayPoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502374355958958292, guid: 67d87e52fd7284645a17e1dae438cb56,
+        type: 3}
+      propertyPath: m_TagString
+      value: Waypoint
       objectReference: {fileID: 0}
     - target: {fileID: 6502374357185062419, guid: 67d87e52fd7284645a17e1dae438cb56,
         type: 3}
@@ -19105,6 +20180,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502374355888763384, guid: 67d87e52fd7284645a17e1dae438cb56,
+        type: 3}
+      propertyPath: m_TagString
+      value: Waypoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502374356001283819, guid: 67d87e52fd7284645a17e1dae438cb56,
+        type: 3}
+      propertyPath: m_TagString
+      value: Waypoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502374355958958293, guid: 67d87e52fd7284645a17e1dae438cb56,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502374355888763385, guid: 67d87e52fd7284645a17e1dae438cb56,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502374355888763385, guid: 67d87e52fd7284645a17e1dae438cb56,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 44.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502374355888763385, guid: 67d87e52fd7284645a17e1dae438cb56,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502374356001283816, guid: 67d87e52fd7284645a17e1dae438cb56,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 47.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502374356001283816, guid: 67d87e52fd7284645a17e1dae438cb56,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502374356001283816, guid: 67d87e52fd7284645a17e1dae438cb56,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -28.49
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67d87e52fd7284645a17e1dae438cb56, type: 3}
