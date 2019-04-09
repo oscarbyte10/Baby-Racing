@@ -70,8 +70,10 @@ public class Ai : MonoBehaviour
         //transform.rotation = Quaternion.Euler(angles);
         Vector3 relativePos = (waypoints[currentWaypoint].position + new Vector3(0, 1.5f, 0)) - transform.position;
         Quaternion rotation = Quaternion.LookRotation(relativePos);
+        
         if (contact)
         {
+            //body.AddTorque(relativePos * Time.deltaTime);
             body.MoveRotation(rotation);
             currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
             contact = false;
