@@ -164,11 +164,18 @@ public class ManuCar : MonoBehaviour
         //Debug.Log(Mathf.Abs(thrust));
         Debug.Log(transform.localPosition);
 
-        if (thrust >= 0)
+        Debug.Log(Mathf.Abs(thrust));
+
+        if (thrust > 0)
         {
             body.AddForce(transform.forward * thrust);
             torque = turnValue * turnStrength;
 
+        }
+        else if (thrust == 0)
+        {
+            body.drag = 1f;
+            torque = turnValue * turnStrength;
         }
         else
         {
