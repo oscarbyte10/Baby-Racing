@@ -24,7 +24,7 @@ public class ManuCar : MonoBehaviour
 
     private float maxVelocity = 30;
 
-    private float forwardAcceleration = 1600f;
+    private float forwardAcceleration = 850f;
     private float reverseAcceleration = 150f;
     float thrust = 0f;
 
