@@ -107,4 +107,11 @@ public class canChoose : MonoBehaviour
         coches[count].transform.position = inicial;
     }
 
+    public void ok()
+    {
+        string name = coches[count].gameObject.name;
+
+        Debug.Log(name);
+    }
+
 }
