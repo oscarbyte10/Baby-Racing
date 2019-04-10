@@ -5,17 +5,6 @@ using UnityEngine;
 public class ManuCar : MonoBehaviour
 {
 
-    /*
-    public float aceleracion = 20f;
-    public float velocidadMax = 100f;
-    public Rigidbody coche;
-    */
-
-    //--------RAYCAST--------
-    //public float hoverForce = 1000;
-    //public float gravityForce = 500f;
-    //public float hoverHeight = 1.5f;
-    //--------RAYCAST--------
     public float Showtime = 0f;
     public int counter = 5;
     //--------MOVEMENT--------
@@ -41,17 +30,10 @@ public class ManuCar : MonoBehaviour
     int layerMask;
     Rigidbody body;
 
-    //public GameObject[] hoverPoints;
-
     public ParticleSystem[] dustTrails = new ParticleSystem[2];
 
     public Transform[] wheelTransform = new Transform[4]; //these are the transforms for our 4 wheels
 
-    // the physical transforms for the car's wheels
-    /*public Transform frontLeftWheel;
-    public Transform frontRightWheel;
-    public Transform rearLeftWheel;
-    public Transform rearRightWheel;*/
     //--------GAMEOBJECTS--------
 
     // Objetos para el canvas
@@ -84,28 +66,6 @@ public class ManuCar : MonoBehaviour
 
     void FixedUpdate()
     {
-        /*
- 
-        //Vector3 fuerza = new Vector3(0.0f, 1.0f, 0.0f); //aplicar fuerza hacia arriba.
-        Vector3 fuerza = new Vector3(0.0f, 0.0f, 1.0f); //aplicar fuerza hacia delante.
-
-        var velVector = coche.velocity; //recoge la velocidad del rigidbody en forma de vector
-        float velActual = velVector.magnitude; //recoge la longitud del vector velocidad (el modulo)
-
-        Debug.Log(velVector);
-
-        //Debug.Log(velActual);
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            if (velActual < velocidadMax)
-            {
-                coche.AddForce(fuerza * aceleracion, ForceMode.Impulse);
-            }
-        }
-        */
-
-
         //--------MOVEMENT--------
         // Main Thrust
         thrust = 0.0f;
@@ -123,13 +83,6 @@ public class ManuCar : MonoBehaviour
         float turnAxis = Input.GetAxis("Horizontal");
         if (Mathf.Abs(turnAxis) > deadZone /*&& body.velocity.sqrMagnitude > 5f*/)
             turnValue = turnAxis;
-
-
-        //anim.SetFloat("giro", turnValue); //al giro del animator
-
-        //--------MOVEMENT--------
-
-
 
         //--------MOVEMENT--------
 
@@ -156,14 +109,6 @@ public class ManuCar : MonoBehaviour
             //var emission = dustTrails[i].emission;
             //emission.rate = new ParticleSystem.MinMaxCurve(emissionRate);
         }
-        //--------MOVEMENT--------
-
-
-        //--------MOVEMENT--------
-
-        // Handle Forward and Reverse forces
-        //Debug.Log(Mathf.Abs(thrust));
-        //Debug.Log(transform.localPosition);
 
         if (thrust >= 0)
         {
