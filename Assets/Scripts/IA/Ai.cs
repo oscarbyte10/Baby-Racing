@@ -7,10 +7,11 @@ public class Ai : MonoBehaviour
 
     //--------WAYPOINT--------
     public GameObject waypointContainer;
-    private Transform[] waypoints;
+    public Transform[] waypoints;
     private int currentWaypoint = 0;
     private bool contact = false;
     public float speed = 100;
+    private Vector3 m_EulerAngleVelocity;
 
 
     Rigidbody body;
@@ -26,17 +27,24 @@ public class Ai : MonoBehaviour
         // Quita el padre de los waypoint
         int i = 0;
         foreach (Transform potencialWaypoint in potencialWaypoints)
+        {
+
             if (potencialWaypoint != waypointContainer.transform)
+            {
+                Debug.Log(potencialWaypoint);
                 waypoints[i++] = potencialWaypoint;
-        Debug.Log("Waypoints creados: "+i);
-        //Debug.Log(waypoints[i]);
+            }
+     
+        }
+           
     }
 
     void Start()
     {
         // -- Creamos array de waypoints
-        GetWaypoints();
-
+       // GetWaypoints();
+        // Velocidad del angulo
+        m_EulerAngleVelocity = new Vector3(0, 50, 0);
         //coche = GetComponent<Rigidbody>();
 
         //--------GAMEOBJECTS--------
@@ -55,26 +63,32 @@ public class Ai : MonoBehaviour
         //transform.rotation = Quaternion.Euler(angles);
         Vector3 relativePos = (waypoints[currentWaypoint].position + new Vector3(0, 0.1f, 0)) - transform.position;
         Quaternion rotation = Quaternion.LookRotation(relativePos);
-        
+        Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
+
+
+
         if (contact)
         {
-            body.AddTorque(relativePos * Time.deltaTime);
-            body.MoveRotation(rotation);
-            Debug.Log("CurrentWayPointBefore: " + currentWaypoint);
-            currentWaypoint = (currentWaypoint = currentWaypoint + 1) % waypoints.Length;
-            Debug.Log("CurrentWayPointAfter: " + currentWaypoint);
+
+            //body.AddTorque(relativePos * Time.deltaTime);
+            body.MoveRotation(rotation); //* deltaRotation);
+           // Debug.Log("CurrentWayPointBefore: " + currentWaypoint);
+            currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
+            //Debug.Log("CurrentWayPointAfter: " + currentWaypoint);
             contact = false;
+
+
+
         }
-
-
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("Waypoint"))
+        void OnTriggerEnter(Collider other)
         {
-            contact = true;
+      
+            if (other.gameObject.CompareTag("Waypoint"))
+            {
+                contact = true;
+            //Debug.Log("CONTACTO COCHE 1!");
         }
-    }
-    
+        }
 }
