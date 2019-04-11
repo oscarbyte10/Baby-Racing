@@ -116,7 +116,7 @@ public class ManuCar : MonoBehaviour
         // Controlador de las fuerzas hacia adelante, atra y parado
         if (thrust > 0)
         {
-            body.AddForce(transform.forward * thrust);
+            body.AddForce(rueda.transform.forward * thrust);
             torque = turnValue * turnStrength;
         }
         else if (thrust == 0)
@@ -147,7 +147,7 @@ public class ManuCar : MonoBehaviour
         }
         else
         {
-            Debug.Log("se acabo el tiempo");
+            //Debug.Log("se acabo el tiempo");
         }
 
         /*

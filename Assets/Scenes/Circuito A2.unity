@@ -400,53 +400,6 @@ MonoBehaviour:
   m_MaximumEffort: 4
   m_Damping: 0
   m_OptimalTargetDistance: 0
---- !u!1 &1141123981
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1141123982}
-  - component: {fileID: 1141123983}
-  m_Layer: 0
-  m_Name: w (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1141123982
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141123981}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.44999996, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6521901502769018768}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1141123983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141123981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7e07941d973eb4d87d4c6f59bafc21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityForce: 20
-  hoverHeight: 0.5
-  grounded: 1
-  hoverPoint: {fileID: 1141123982}
 --- !u!1 &1192883801
 GameObject:
   m_ObjectHideFlags: 3
@@ -778,7 +731,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6521901502769018768}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3045782931112884909
 Transform:
@@ -861,7 +814,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6521901502769018768}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!33 &4984886649165447671
 MeshFilter:
@@ -920,7 +873,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6521901502769018768}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4984886650204704947
 MeshFilter:
@@ -960,7 +913,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6521901502769018768}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &4984886650576337609
 GameObject:
@@ -1054,7 +1007,7 @@ Transform:
   m_Children:
   - {fileID: 3045782931112884909}
   m_Father: {fileID: 6521901502769018768}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6521901502517937200
 GameObject:
@@ -1100,9 +1053,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityForce: 20
-  hoverHeight: 0.5
   grounded: 1
   hoverPoint: {fileID: 6521901502517937201}
+  raycastPoint: {fileID: 0}
 --- !u!4 &6521901502769018768
 Transform:
   m_ObjectHideFlags: 0
@@ -1118,7 +1071,6 @@ Transform:
   - {fileID: 6521901503175348325}
   - {fileID: 6521901502517937201}
   - {fileID: 6521901503381497896}
-  - {fileID: 1141123982}
   - {fileID: 6521901501870390797}
   - {fileID: 4984886650204704945}
   - {fileID: 4984886650576337608}
@@ -1243,9 +1195,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityForce: 20
-  hoverHeight: 0.5
   grounded: 1
   hoverPoint: {fileID: 6521901502776445438}
+  raycastPoint: {fileID: 0}
 --- !u!114 &6521901503175348322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1259,9 +1211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityForce: 20
-  hoverHeight: 0.5
   grounded: 1
   hoverPoint: {fileID: 6521901503175348325}
+  raycastPoint: {fileID: 0}
 --- !u!1 &6521901503175348324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,9 +1272,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityForce: 20
-  hoverHeight: 0.5
   grounded: 1
   hoverPoint: {fileID: 6521901503381497896}
+  raycastPoint: {fileID: 0}
 --- !u!1 &6521901503381497899
 GameObject:
   m_ObjectHideFlags: 0
