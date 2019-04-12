@@ -9,9 +9,9 @@ public class Suspension : MonoBehaviour
     private Transform ruedaTransform;
 
     public float gravityForce = 1000f;
-    private float hoverForce = 1000f;
+    private float hoverForce = 1500f;
     private float hoverHeight = 0.5f;
-    float hoverDamp = 30f;
+    float hoverDamp = 50f;
 
     public bool grounded;
     public Vector3 distanciaPoint = new Vector3();
@@ -22,6 +22,8 @@ public class Suspension : MonoBehaviour
     private RaycastHit hit;
     public Transform raycastPoint;
     // Works like start but before it
+    public Transform ruedaReal;
+
 
     void Awake()
     {
@@ -29,7 +31,6 @@ public class Suspension : MonoBehaviour
         rueda = this.gameObject;
         hoverPoint = rueda.transform;
         Debug.Log(hoverPoint);
-        
     }
 
     // Start is called before the first frame update
@@ -39,6 +40,7 @@ public class Suspension : MonoBehaviour
         layerMask = 1 << LayerMask.GetMask("coche de pruebas");
         layerMask = ~layerMask;
 
+        ruedaReal = this.gameObject.transform.GetChild(0);
 
     }
 
@@ -78,7 +80,8 @@ public class Suspension : MonoBehaviour
 
             coche.AddForceAtPosition(Vector3.up * elevacion, hoverPoint.transform.position);
             grounded = true;
-            Debug.DrawRay(hit.point, -transform.up, Color.red);
+
+            ruedaReal.transform.position = Vector3.MoveTowards(transform.position, hit.point, 2f);
         }
         else
         {
@@ -95,8 +98,9 @@ public class Suspension : MonoBehaviour
             }
         }
 
+        Debug.DrawRay(hit.point, transform.up, Color.red);
 
-        
+
 
 
         /*

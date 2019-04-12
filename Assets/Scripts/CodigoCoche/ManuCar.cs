@@ -39,8 +39,8 @@ public class ManuCar : MonoBehaviour
     public float Showtime = 0f;
 
 
-
-
+    public Vector3 center;
+    public Vector3 localF;
 
     void Start()
     {
@@ -52,6 +52,7 @@ public class ManuCar : MonoBehaviour
 
         //--------GAMEOBJECTS--------
         body = GetComponent<Rigidbody>();
+        center = body.centerOfMass;
         body.centerOfMass = Vector3.down; //UNO POR DEBAJO DEL VEHICULO, no es realista, pero asi sera dificil que el coche quede boca abajo
 
         layerMask = 1 << LayerMask.NameToLayer("Vehicle");
@@ -94,14 +95,16 @@ public class ManuCar : MonoBehaviour
         // Controlador de la friccion
         if (rueda.grounded == true)
         {
-            body.drag = groundedDrag;
+            //body.drag = groundedDrag;
             //emissionRate = 10;
         }
         else
         {
+            /*
             body.drag = 0.1f;
             thrust /= 200f;
             turnValue /= 20f;
+            */
         }
 
         //Controlador de las particulas de las ruedas*
@@ -116,7 +119,12 @@ public class ManuCar : MonoBehaviour
         // Controlador de las fuerzas hacia adelante, atra y parado
         if (thrust > 0)
         {
-            body.AddForce(rueda.transform.forward * thrust);
+            localF = rueda.transform.forward;
+            localF.y = localF.y - 0.5f;
+            //center.y = center.y - 0.2f;
+            //center.z = center.z + 0.5f;
+
+            body.AddForce(localF * thrust);
             torque = turnValue * turnStrength;
         }
         else if (thrust == 0)
