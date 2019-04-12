@@ -23,7 +23,7 @@ public class Suspension : MonoBehaviour
     public Transform raycastPoint;
     // Works like start but before it
     public Transform ruedaReal;
-
+    public Vector3 point;
 
     void Awake()
     {
@@ -81,7 +81,9 @@ public class Suspension : MonoBehaviour
             coche.AddForceAtPosition(Vector3.up * elevacion, hoverPoint.transform.position);
             grounded = true;
 
-            ruedaReal.transform.position = Vector3.MoveTowards(transform.position, hit.point, 2f);
+            point = hit.point;
+            point.y = point.y + 0.3f;
+            ruedaReal.transform.position = Vector3.MoveTowards(transform.position, point, 2f);
         }
         else
         {

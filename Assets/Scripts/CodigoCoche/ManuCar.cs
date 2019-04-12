@@ -119,7 +119,7 @@ public class ManuCar : MonoBehaviour
         // Controlador de las fuerzas hacia adelante, atra y parado
         if (thrust > 0)
         {
-            localF = rueda.transform.forward;
+            localF = transform.forward;
             localF.y = localF.y - 0.5f;
             //center.y = center.y - 0.2f;
             //center.z = center.z + 0.5f;
@@ -138,7 +138,7 @@ public class ManuCar : MonoBehaviour
             torque = -turnValue * turnStrength;
         }
 
-
+        //downforce
 
 
         if (Input.GetKey(KeyCode.LeftShift))
