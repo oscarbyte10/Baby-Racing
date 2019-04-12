@@ -18,6 +18,10 @@ public class ManuCar : MonoBehaviour
 
     public float tilt;
 
+    public Vector3 localF;
+    public Vector3 centerOfMass;
+    public Transform middle;
+
     private float turnStrength = 80f;
     public float turnValue = 0f;
 
@@ -116,8 +120,18 @@ public class ManuCar : MonoBehaviour
         // Controlador de las fuerzas hacia adelante, atra y parado
         if (thrust > 0)
         {
-            body.AddForce(transform.forward * thrust);
+
+            localF = transform.forward;
+            Debug.Log(localF);
+            localF.y = 0f;
+            Vector3 forward = new Vector3(0,0,0);
+            forward = middle.InverseTransformDirection(Vector3.forward);
+
+            body.AddForceAtPosition(localF * thrust, forward );
             torque = turnValue * turnStrength;
+
+            Debug.DrawLine(forward, new Vector3(0, 1, 0), Color.cyan);
+
         }
         else if (thrust == 0)
         {
@@ -147,7 +161,7 @@ public class ManuCar : MonoBehaviour
         }
         else
         {
-            Debug.Log("se acabo el tiempo");
+            //Debug.Log("se acabo el tiempo");
         }
 
         /*

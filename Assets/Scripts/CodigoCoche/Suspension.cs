@@ -56,6 +56,7 @@ public class Suspension : MonoBehaviour
             float upwardSpeed = coche.velocity.y; 
             float elevacion = compression * hoverForce - upwardSpeed * hoverDamp;
 
+
             coche.AddForceAtPosition(Vector3.up * elevacion, hoverPoint.transform.position);
             grounded = true;
             Debug.DrawRay(hit.point, Vector3.up, Color.red);
