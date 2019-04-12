@@ -18,10 +18,6 @@ public class ManuCar : MonoBehaviour
 
     public float tilt;
 
-    public Vector3 localF;
-    public Vector3 centerOfMass;
-    public Transform middle;
-
     private float turnStrength = 80f;
     public float turnValue = 0f;
 
@@ -43,8 +39,8 @@ public class ManuCar : MonoBehaviour
     public float Showtime = 0f;
 
 
-
-
+    public Vector3 center;
+    public Vector3 localF;
 
     void Start()
     {
@@ -56,6 +52,7 @@ public class ManuCar : MonoBehaviour
 
         //--------GAMEOBJECTS--------
         body = GetComponent<Rigidbody>();
+        center = body.centerOfMass;
         body.centerOfMass = Vector3.down; //UNO POR DEBAJO DEL VEHICULO, no es realista, pero asi sera dificil que el coche quede boca abajo
 
         layerMask = 1 << LayerMask.NameToLayer("Vehicle");
@@ -98,14 +95,16 @@ public class ManuCar : MonoBehaviour
         // Controlador de la friccion
         if (rueda.grounded == true)
         {
-            body.drag = groundedDrag;
+            //body.drag = groundedDrag;
             //emissionRate = 10;
         }
         else
         {
+            /*
             body.drag = 0.1f;
             thrust /= 200f;
             turnValue /= 20f;
+            */
         }
 
         //Controlador de las particulas de las ruedas*
@@ -120,18 +119,13 @@ public class ManuCar : MonoBehaviour
         // Controlador de las fuerzas hacia adelante, atra y parado
         if (thrust > 0)
         {
-
             localF = transform.forward;
-            Debug.Log(localF);
-            localF.y = 0f;
-            Vector3 forward = new Vector3(0,0,0);
-            forward = middle.InverseTransformDirection(Vector3.forward);
+            localF.y = localF.y - 0.5f;
+            //center.y = center.y - 0.2f;
+            //center.z = center.z + 0.5f;
 
-            body.AddForceAtPosition(localF * thrust, forward );
+            body.AddForce(localF * thrust);
             torque = turnValue * turnStrength;
-
-            Debug.DrawLine(forward, new Vector3(0, 1, 0), Color.cyan);
-
         }
         else if (thrust == 0)
         {
@@ -144,7 +138,7 @@ public class ManuCar : MonoBehaviour
             torque = -turnValue * turnStrength;
         }
 
-
+        //downforce
 
 
         if (Input.GetKey(KeyCode.LeftShift))
