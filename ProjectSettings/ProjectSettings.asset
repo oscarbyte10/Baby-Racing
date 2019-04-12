@@ -591,6 +591,8 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Build: 0
+    Collab: 0
     UNet: 1
   luminIcon:
     m_Name: 
@@ -611,10 +613,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 2307ee17-6185-4097-a538-20a15906e7f5
+  cloudProjectId: 88cd91df-dc17-44c9-9129-eddcc9fa505e
   framebufferDepthMemorylessMode: 0
   projectName: projecte
-  organizationId: gasaga
+  organizationId: dianait
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

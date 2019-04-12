@@ -7,13 +7,15 @@ public class AiCoche2 : MonoBehaviour
 
     //--------WAYPOINT--------
     public GameObject waypointContainer2;
-    public Transform[] waypoints2;
+    private Transform[] waypoints2;
     private int currentWaypoint2 = 0;
     private bool contact2 = false;
     public float speed2 = 100;
     private Vector3 m_EulerAngleVelocity2;
-    private int counter;
+    public float Showtime = 0f;
+    public int counter = 5;
 
+    private Transform siguienteWaypoint;
 
     Rigidbody body2;
 
@@ -44,7 +46,10 @@ public class AiCoche2 : MonoBehaviour
     {
         counter = 0;
         // -- Creamos array de waypoints
-        // GetWaypoints();
+        GetWaypoints();
+
+        siguienteWaypoint = waypoints2[currentWaypoint2];
+
         // Velocidad del angulo
         m_EulerAngleVelocity2 = new Vector3(0, 50, 0);
         //coche = GetComponent<Rigidbody>();
@@ -58,12 +63,12 @@ public class AiCoche2 : MonoBehaviour
 
     void Update()
     {
-        Vector3 newPos = Vector3.MoveTowards(body2.transform.position, waypoints2[currentWaypoint2].position, speed2 * Time.deltaTime);
+        Vector3 newPos = Vector3.MoveTowards(body2.transform.position, siguienteWaypoint.position, speed2 * Time.deltaTime);
         body2.MovePosition(newPos);
         float angles;
         angles = newPos.x / newPos.magnitude;
         //transform.rotation = Quaternion.Euler(angles);
-        Vector3 relativePos = (waypoints2[currentWaypoint2].position + new Vector3(0, 0.1f, 0)) - transform.position;
+        Vector3 relativePos = (siguienteWaypoint.position + new Vector3(0, 0.1f, 0)) - transform.position;
         Quaternion rotation = Quaternion.LookRotation(relativePos);
         Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity2 * Time.deltaTime);
 
@@ -72,16 +77,14 @@ public class AiCoche2 : MonoBehaviour
         if (contact2)
         {
          
-
             //body.AddTorque(relativePos * Time.deltaTime);
             body2.MoveRotation(rotation); //* deltaRotation);
             // Debug.Log("CurrentWayPointBefore: " + currentWaypoint2);
             currentWaypoint2 = (currentWaypoint2 + 1) % waypoints2.Length;
+            siguienteWaypoint = waypoints2[currentWaypoint2];
             //S Debug.Log("CurrentWayPointAfter: " + currentWaypoint2);
             contact2 = false;
-            Debug.Log("CONTACTO COCHE 2! - " + counter + " --- CurrentWayPoint: " + currentWaypoint2);
-
-
+            //Debug.Log("CONTACTO COCHE 2! - CurrentWayPoint: " + currentWaypoint2);
 
         }
 
@@ -90,12 +93,11 @@ public class AiCoche2 : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        counter++;
-        if (other.gameObject.CompareTag("Waypoint"))
+        if (other.transform == siguienteWaypoint)
         {
-            contact2 = true;
           
-         
+           contact2 = true;
+
         }
     }
 }
