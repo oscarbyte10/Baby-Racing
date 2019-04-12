@@ -14,10 +14,12 @@ public class AiCoche2 : MonoBehaviour
     private Vector3 m_EulerAngleVelocity2;
     public float Showtime = 0f;
     public int counter = 5;
-
+    private float angles;
     private Transform siguienteWaypoint;
-
+    //Creamos una variable para guardar el WAYPOINT anterior al actual para calcular el angulo entre éste y el siguiente
+    private Transform siguienteWaypointMasUno;
     Rigidbody body2;
+    public float velocidadGiro = 50f;
 
 
     //--------GAMEOBJECTS--------
@@ -34,7 +36,7 @@ public class AiCoche2 : MonoBehaviour
 
             if (potencialWaypoint2 != waypointContainer2.transform)
             {
-                Debug.Log(potencialWaypoint2);
+               // Debug.Log(potencialWaypoint2);
                 waypoints2[i++] = potencialWaypoint2;
             }
 
@@ -52,10 +54,10 @@ public class AiCoche2 : MonoBehaviour
 
         // Velocidad del angulo
         m_EulerAngleVelocity2 = new Vector3(0, 50, 0);
-        //coche = GetComponent<Rigidbody>();
 
         //--------GAMEOBJECTS--------
         body2 = GetComponent<Rigidbody>();
+        
         body2.centerOfMass = Vector3.down; //UNO POR DEBAJO DEL VEHICULO, no es realista, pero asi sera dificil que el coche quede boca abajo
         //--------GAMEOBJECTS--------
 
@@ -65,26 +67,28 @@ public class AiCoche2 : MonoBehaviour
     {
         Vector3 newPos = Vector3.MoveTowards(body2.transform.position, siguienteWaypoint.position, speed2 * Time.deltaTime);
         body2.MovePosition(newPos);
-        float angles;
-        angles = newPos.x / newPos.magnitude;
-        //transform.rotation = Quaternion.Euler(angles);
-        Vector3 relativePos = (siguienteWaypoint.position + new Vector3(0, 0.1f, 0)) - transform.position;
-        Quaternion rotation = Quaternion.LookRotation(relativePos);
-        Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity2 * Time.deltaTime);
+
+        //Si estamos en currentWaypoint = 0, el waypoint anterior será el último del array de waypoints
+        if (currentWaypoint2 == waypoints2.Length - 1)
+        {
+            siguienteWaypointMasUno = waypoints2[0];
+        }
+
+        else
+        {
+            siguienteWaypointMasUno = waypoints2[currentWaypoint2 + 1];
+        }
 
 
+        float angle = Vector3.Angle(siguienteWaypoint.position, siguienteWaypointMasUno.position);
 
         if (contact2)
         {
-         
-            //body.AddTorque(relativePos * Time.deltaTime);
-            body2.MoveRotation(rotation); //* deltaRotation);
-            // Debug.Log("CurrentWayPointBefore: " + currentWaypoint2);
+        
+            body2.transform.Rotate(Vector3.up, angle);
             currentWaypoint2 = (currentWaypoint2 + 1) % waypoints2.Length;
             siguienteWaypoint = waypoints2[currentWaypoint2];
-            //S Debug.Log("CurrentWayPointAfter: " + currentWaypoint2);
             contact2 = false;
-            //Debug.Log("CONTACTO COCHE 2! - CurrentWayPoint: " + currentWaypoint2);
 
         }
 
