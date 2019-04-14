@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 41d0606ec2f185841ab329d3e95fd6b8
+guid: df976ba2302e3f841ae0b8e21d3c4e77
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -22,9 +22,9 @@ ModelImporter:
     3300002: Cylinder001
     3300004: Line001
     3300006: Plane001
-    4300000: Cylinder001
+    4300000: Plane001
     4300002: Box002
-    4300004: Plane001
+    4300004: Cylinder001
     4300006: Line001
     7400000: Take 001
     9500000: //RootNode

@@ -11,10 +11,11 @@ public class Suspension : MonoBehaviour
     public float gravityForce = 1000f;
     private float hoverForce = 1500f;
     private float hoverHeight = 0.5f;
-    float hoverDamp = 50f;
+    private float groundDetection = 1f;
+    float hoverDamp = 10f;
 
     public bool grounded;
-    public Vector3 distanciaPoint = new Vector3();
+    public Vector3 normalVec = new Vector3();
 
     public Transform hoverPoint;
     int layerMask;
@@ -24,6 +25,9 @@ public class Suspension : MonoBehaviour
     // Works like start but before it
     public Transform ruedaReal;
     public Vector3 point;
+    public Vector3 ruedaIni;
+
+    // Works like start but before it
 
     void Awake()
     {
@@ -41,49 +45,35 @@ public class Suspension : MonoBehaviour
         layerMask = ~layerMask;
 
         ruedaReal = this.gameObject.transform.GetChild(0);
-
+        ruedaIni = ruedaReal.InverseTransformPoint(ruedaReal.transform.position);
     }
 
-    private void Update()
-    {
-
-    }
 
     private void FixedUpdate()
     {
         float speed = coche.velocity.magnitude;
 
 
-
-
         //--------RAYCAST--------
         //  Hover Force
-
-
-        int layerMask = 1 << 8;
-        layerMask = ~layerMask;
-
         RaycastHit hit;
 
-        if (Physics.Raycast(hoverPoint.transform.position, -transform.up, out hit, hoverHeight, layerMask))
-            {
-            float compression =  hoverHeight - hit.distance;
-            float upwardSpeed = coche.velocity.y; 
+        if (Physics.Raycast(hoverPoint.transform.position, -transform.up, out hit, hoverHeight))
+        {
+            float compression = hoverHeight - hit.distance;
+            float upwardSpeed = coche.velocity.y;
             float elevacion = compression * hoverForce - upwardSpeed * hoverDamp;
 
-            distanciaPoint = hit.point;
-
-            Debug.Log(hit.normal);
-            Debug.Log(transform.up);
-            Debug.Log(Vector3.up);
-            Debug.Log("----------------------");
+            normalVec = hit.normal;
 
             coche.AddForceAtPosition(Vector3.up * elevacion, hoverPoint.transform.position);
-            grounded = true;
+
 
             point = hit.point;
             point.y = point.y + 0.3f;
             ruedaReal.transform.position = Vector3.MoveTowards(transform.position, point, 2f);
+            Debug.DrawRay(hit.point, hit.normal, Color.red);
+
         }
         else
         {
@@ -91,17 +81,30 @@ public class Suspension : MonoBehaviour
             if (transform.position.y > hoverPoint.transform.position.y)
             {
                 coche.AddForceAtPosition(hoverPoint.transform.up * gravityForce, hoverPoint.transform.position);
-                grounded = false;
             }
             else
             {
                 coche.AddForceAtPosition(hoverPoint.transform.up * -gravityForce, hoverPoint.transform.position);
-                grounded = false;
             }
+        }
+
+
+        if (Physics.Raycast(hoverPoint.transform.position, -transform.up, out hit, groundDetection))
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
         }
 
         Debug.DrawRay(hit.point, transform.up, Color.red);
 
+
+
+
+
+   
 
 
 

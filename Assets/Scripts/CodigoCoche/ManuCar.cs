@@ -42,6 +42,11 @@ public class ManuCar : MonoBehaviour
     public Vector3 center;
     public Vector3 localF;
 
+
+    public List<Suspension>  ruedas; //referencia a la clase suspension
+    private Suspension rueda;
+
+
     void Start()
     {
         // --- Hacemos referencia a la función canvas para saber si tenemos el nitro lleno o no ---
@@ -59,6 +64,13 @@ public class ManuCar : MonoBehaviour
         layerMask = ~layerMask;
 
         //--------GAMEOBJECTS--------
+        int i = 0;
+        while(i <= 3)
+        {
+            rueda = transform.Find("w" + i).GetComponent<Suspension>(); //referencia  a la instancia particular/local de la clase suspension de cada rueda
+            ruedas.Add(rueda);
+            i++;
+        }
 
     }
 
@@ -88,23 +100,28 @@ public class ManuCar : MonoBehaviour
         
 
         //var emissionRate = 0;
-        Suspension rueda; //referencia a la clase suspension
-        rueda = gameObject.GetComponentInChildren<Suspension>(); //referencia  a la instancia particular/local de la clase suspension de cada rueda
 
+        
+        GroundDetector ground;
+        ground = gameObject.GetComponentInChildren<GroundDetector>();
 
-        // Controlador de la friccion
-        if (rueda.grounded == true)
+        // Controlador de la friccion        
+        if (ruedas[0].grounded == false && ruedas[1].grounded == false && ruedas[2].grounded == false && ruedas[3].grounded == false)
         {
-            //body.drag = groundedDrag;
             //emissionRate = 10;
-        }
-        else
-        {
-            /*
             body.drag = 0.1f;
             thrust /= 200f;
             turnValue /= 20f;
-            */
+
+            Debug.Log("Volando voy");
+        }
+        else
+        {
+            Debug.Log("En tierra estoy");
+            body.drag = groundedDrag;
+
+
+
         }
 
         //Controlador de las particulas de las ruedas*
@@ -120,11 +137,28 @@ public class ManuCar : MonoBehaviour
         if (thrust > 0)
         {
             localF = transform.forward;
-            localF.y = localF.y - 0.5f;
+            //localF.y = localF.y - 0.5f;
             //center.y = center.y - 0.2f;
             //center.z = center.z + 0.5f;
 
-            body.AddForce(localF * thrust);
+
+
+            Vector3 normal0 = ruedas[0].normalVec;
+            Vector3 normal1 = ruedas[1].normalVec;
+            Vector3 normal2 = ruedas[2].normalVec;
+            Vector3 normal3 = ruedas[3].normalVec;
+
+            Vector3 forward0 = Vector3.ProjectOnPlane(localF, normal0);
+            Vector3 forward1 = Vector3.ProjectOnPlane(localF, normal1);
+            Vector3 forward2 = Vector3.ProjectOnPlane(localF, normal2);
+            Vector3 forward3 = Vector3.ProjectOnPlane(localF, normal3);
+
+
+            body.AddForce(forward0 * thrust / 4);
+            body.AddForce(forward1 * thrust / 4);
+            body.AddForce(forward2 * thrust / 4);
+            body.AddForce(forward3 * thrust / 4);
+
             torque = turnValue * turnStrength;
         }
         else if (thrust == 0)
@@ -138,7 +172,6 @@ public class ManuCar : MonoBehaviour
             torque = -turnValue * turnStrength;
         }
 
-        //downforce
 
 
         if (Input.GetKey(KeyCode.LeftShift))
