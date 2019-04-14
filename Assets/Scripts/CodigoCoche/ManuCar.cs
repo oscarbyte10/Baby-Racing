@@ -119,9 +119,6 @@ public class ManuCar : MonoBehaviour
         {
             Debug.Log("En tierra estoy");
             body.drag = groundedDrag;
-
-
-
         }
 
         //Controlador de las particulas de las ruedas*

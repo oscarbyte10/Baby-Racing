@@ -11,7 +11,7 @@ public class Suspension : MonoBehaviour
     public float gravityForce = 1000f;
     private float hoverForce = 1500f;
     private float hoverHeight = 0.5f;
-    private float groundDetection = 1f;
+    private float groundDetection = 0.7f;
     float hoverDamp = 10f;
 
     public bool grounded;
