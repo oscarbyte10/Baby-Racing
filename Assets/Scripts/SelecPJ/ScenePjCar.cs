@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class canChoose : MonoBehaviour
+public class ScenePjCar : MonoBehaviour
 {
     //public GameObject coche1;
     //public GameObject coche2;
@@ -14,10 +15,7 @@ public class canChoose : MonoBehaviour
     float y = 0f;
     float z = 0f;
     // Objeto vacío del que recogemos sus coordenadas para colocar los coches que estamos cambiando
-    public GameObject aux1;
-    public GameObject aux2;
-    public GameObject aux3;
-    private Button[] arrayButton;
+    private Text textBox;
     private Vector3 inicial = new Vector3(0f,2.5f,0f);
     private int count = -1;
 
@@ -26,9 +24,7 @@ public class canChoose : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        arrayButton = GetComponentsInChildren<Button>();
-        //Debug.Log(GetComponentsInChildren<Button>().Length);
-        //Debug.Log(arrayButton.Length);
+        textBox = GameObject.Find("carName").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -63,11 +59,12 @@ public class canChoose : MonoBehaviour
         y = auxCar.position.y;
         z = auxCar.position.z;
 
-       // Debug.Log("Guardamos las coordenadas donde estaba el coche: "+x+", "+y+", "+z);
-       // Debug.Log("Ahora el coche "+count+" estara en la posición inicial: "+inicial);
+        // Debug.Log("Guardamos las coordenadas donde estaba el coche: "+x+", "+y+", "+z);
+        // Debug.Log("Ahora el coche "+count+" estara en la posición inicial: "+inicial);
 
         // Mueve el coche a la nueva posición, que es la 0, 2.5, 0 que corresponde a la plataforma inicial
         // la que vamos a ver en el juego
+        showCarName(coches[count].gameObject);
         coches[count].transform.position = inicial;
     }
 
@@ -99,19 +96,32 @@ public class canChoose : MonoBehaviour
         y = auxCar.position.y;
         z = auxCar.position.z;
 
-       // Debug.Log("Guardamos las coordenadas donde estaba el coche: " + x + ", " + y + ", " + z);
-       // Debug.Log("Ahora el coche " + count + " estara en la posición inicial: " + inicial);
+        // Debug.Log("Guardamos las coordenadas donde estaba el coche: " + x + ", " + y + ", " + z);
+        // Debug.Log("Ahora el coche " + count + " estara en la posición inicial: " + inicial);
 
         // Mueve el coche a la nueva posición, que es la 0, 2.5, 0 que corresponde a la plataforma inicial
         // la que vamos a ver en el juego
+        showCarName(coches[count]);
+
         coches[count].transform.position = inicial;
+
+
     }
 
     public void ok()
     {
         string name = coches[count].gameObject.name;
-
+        //Una vez elegido pasamos a la escena de seleccionar circuito
+        SceneManager.LoadScene(2);
         Debug.Log(name);
+    }
+
+    // Adding car name in textbox
+    public void showCarName(GameObject car)
+    {
+        Debug.Log(car.name);
+        //textBox.text = car.name;
+        textBox.text = car.name;
     }
 
 }

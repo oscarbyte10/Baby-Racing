@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu Principal.unity
     guid: 2fd328555c4edd34ea760b72dd164751
   - enabled: 1
+    path: Assets/Scenes/SeleccionarJugador.unity
+    guid: 3a98439b3ad3b434a8a3848181b56e52
+  - enabled: 1
+    path: Assets/Scenes/SeleccionarCircuito.unity
+    guid: 1424f620183eb7b4c9121748dbc74e9c
+  - enabled: 1
     path: Assets/Scenes/Circuito A.unity
     guid: 619392d6d89cf9546a79309c318f19ca
   m_configObjects: {}
