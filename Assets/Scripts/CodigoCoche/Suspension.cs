@@ -73,10 +73,6 @@ public class Suspension : MonoBehaviour
 
             distanciaPoint = hit.point;
 
-            Debug.Log(hit.normal);
-            Debug.Log(transform.up);
-            Debug.Log(Vector3.up);
-            Debug.Log("----------------------");
 
             coche.AddForceAtPosition(Vector3.up * elevacion, hoverPoint.transform.position);
             grounded = true;

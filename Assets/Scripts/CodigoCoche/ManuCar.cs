@@ -36,10 +36,11 @@ public class ManuCar : MonoBehaviour
     private Canvas c;
 
 
-    public float Showtime = 0f;
+    public float contador = 0f;
+    public float contador2 = 0f;
 
 
-    public Vector3 center;
+    public bool barro;
     public Vector3 localF;
 
     void Start()
@@ -52,13 +53,13 @@ public class ManuCar : MonoBehaviour
 
         //--------GAMEOBJECTS--------
         body = GetComponent<Rigidbody>();
-        center = body.centerOfMass;
-        body.centerOfMass = Vector3.down; //UNO POR DEBAJO DEL VEHICULO, no es realista, pero asi sera dificil que el coche quede boca abajo
 
         layerMask = 1 << LayerMask.NameToLayer("Vehicle");
         layerMask = ~layerMask;
 
         //--------GAMEOBJECTS--------
+
+
 
     }
 
@@ -95,16 +96,16 @@ public class ManuCar : MonoBehaviour
         // Controlador de la friccion
         if (rueda.grounded == true)
         {
-            //body.drag = groundedDrag;
+            body.drag = groundedDrag;
             //emissionRate = 10;
         }
         else
         {
-            /*
+            
             body.drag = 0.1f;
             thrust /= 200f;
             turnValue /= 20f;
-            */
+            
         }
 
         //Controlador de las particulas de las ruedas*
@@ -143,20 +144,35 @@ public class ManuCar : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            Showtime = 0.5f;
+            contador = 0.5f;
         }
 
-        if (Showtime > 0f)
+        //------------------------------------------BARRO--------------------------------------
+        if (Input.GetKey(KeyCode.R))
         {
-            Showtime = Showtime - (Time.deltaTime);
+            contador2 = 1.2f;
+        }
+
+        if (contador2 > 0f)
+        {
+            contador2 = contador2 - (Time.deltaTime);
+            body.AddRelativeTorque(Vector3.up * 15, ForceMode.Acceleration);
+
+        }
+        //------------------------------------------BARRO--------------------------------------
+
+
+        if (contador > 0f)
+        {
+
+            contador = contador - (Time.deltaTime);
+
             Vector3 forward = transform.forward;
             forward.y = 0f;
             body.AddForce(forward * 30, ForceMode.Impulse); //aplicar impulso hacia delante local
+
         }
-        else
-        {
-            //Debug.Log("se acabo el tiempo");
-        }
+
 
         /*
         // Comprobaremos el nitro una vez le de a la tecla shift
