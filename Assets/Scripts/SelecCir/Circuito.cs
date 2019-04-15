@@ -6,6 +6,7 @@ public class Circuito : MonoBehaviour
 {
     private string circuitName;
     private int numScene;
+
     public Circuito()
     {
 

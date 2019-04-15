@@ -26,7 +26,7 @@ public class Suspension : MonoBehaviour
         coche = transform.root.GetComponent<Rigidbody>();
         rueda = this.gameObject;
         hoverPoint = rueda.transform;
-        Debug.Log(hoverPoint);
+        //Debug.Log(hoverPoint);
         
     }
 
@@ -58,7 +58,7 @@ public class Suspension : MonoBehaviour
 
             coche.AddForceAtPosition(Vector3.up * elevacion, hoverPoint.transform.position);
                 grounded = true;
-                Debug.DrawRay(hit.point, hit.normal, Color.red);
+                //Debug.DrawRay(hit.point, hit.normal, Color.red);
         }
         else
         {

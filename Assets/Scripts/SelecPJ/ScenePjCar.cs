@@ -16,14 +16,15 @@ public class ScenePjCar : MonoBehaviour
     float z = 0f;
     // Objeto vacío del que recogemos sus coordenadas para colocar los coches que estamos cambiando
     private Text textBox;
-    private Vector3 inicial = new Vector3(0f,2.5f,0f);
+    private Vector3 inicial = new Vector3(1.2f,2f,0f);
     private int count = -1;
-
+    public Informacion info1;
     
 
     // Start is called before the first frame update
     void Start()
     {
+        info1 = FindObjectOfType<Informacion>();
         textBox = GameObject.Find("carName").GetComponent<Text>();
     }
 
@@ -110,16 +111,35 @@ public class ScenePjCar : MonoBehaviour
 
     public void ok()
     {
-        string name = coches[count].gameObject.name;
+
+        // Cogemos el nombre del coche elegido
+        //car.Name = coches[count].gameObject.name;
+        //Debug.Log(car.Name);
+        //Debug.Log(coches[count].gameObject);
+        // A partir del nombre elegido cogemos el objeto
+        //car.Coche = coches[count];
+        //Debug.Log(car.Coche);
+        //Debug.Log(coches[count].gameObject.name);
+        info1.setNameCar(coches[count].gameObject.name);
+        //Debug.Log("Debug de la escena del PJ: "+info1.getNameCar());
+
+        //Cogemos el objeto coche
+        info1.setObjCar(coches[count].gameObject);
+
+        /* NOTA: No podemos pasarle un objeto que no sea GameObject u otra clase de objeto que este definido en unity.
+         * A no ser que ese mismo objeto sea un único objeto y no un array.
+         */
+        // Le decimos que no destruya el objeto coche que hemos elegido
+        //DontDestroyOnLoad();
         //Una vez elegido pasamos a la escena de seleccionar circuito
         SceneManager.LoadScene(2);
-        Debug.Log(name);
+        //Debug.Log(name);
     }
 
     // Adding car name in textbox
     public void showCarName(GameObject car)
     {
-        Debug.Log(car.name);
+        //Debug.Log(car.name);
         //textBox.text = car.name;
         textBox.text = car.name;
     }

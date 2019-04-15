@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public event OnStateChangeHandler OnStateChange;
     public GameState gameState { get; private set; }
 
-
+    // Variables para la creación de circuitos
     public int numeroDeCircuitos = 2;
     private string[] arrayNameCircuits = {"Cubo y pala", "Guarderia"};
     int numScene = 4;

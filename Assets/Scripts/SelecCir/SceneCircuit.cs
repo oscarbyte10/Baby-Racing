@@ -15,11 +15,15 @@ public class SceneCircuit : MonoBehaviour
     private Text textBox;
     // Array de circuitos
     private Circuito[] array;
-
-
+    private Informacion info2;
+    public GameObject objPj;
+    //private GameObject car;
     // Start is called before the first frame update
     void Start()
     {
+
+        info2 = FindObjectOfType<Informacion>();
+        //Debug.Log("Informacion de la escena del PJ: " + info2.getNameCar());
         array = GM.setArrayCircuit();
         image = GameObject.Find("showCircuit").GetComponent<Image>();
         textBox = GameObject.Find("circuitName").GetComponent<Text>();
@@ -29,7 +33,10 @@ public class SceneCircuit : MonoBehaviour
 
     public void okCircuit()
     {
-        Debug.Log(array[count].NumScene);
+        
+        info2.setNumCar(array[count].NumScene);
+        //Debug.Log("Este es el nombre del coche: "+info.getNameCar());
+        //Debug.Log("Este es el número del escenario: "+ info.getNumCar());
         // Cuando tengamos más circuitos simplemente debemos de añadir el NumScene dentro del LoadScene
         SceneManager.LoadScene(3);
         // 

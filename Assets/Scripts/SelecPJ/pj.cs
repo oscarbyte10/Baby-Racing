@@ -12,18 +12,12 @@ public class pj : MonoBehaviour
     {
         //body = GetComponent<Rigidbody>();
         // Velocidad del angulo
-        m_EulerAngleVelocity = new Vector3(0, 30, 0);
+        m_EulerAngleVelocity = new Vector3(0, 50, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // calculamos el vector de la posición relativa
-        //Vector3 relativePos = body.transform.position;
-        // Calculamos rotación
-        //Quaternion rotation = Quaternion.LookRotation(relativePos);
-        // Añadimos rotación
-        //body.MoveRotation(rotation);
 
     }
 
