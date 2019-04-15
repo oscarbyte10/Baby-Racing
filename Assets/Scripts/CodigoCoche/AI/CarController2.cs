@@ -30,7 +30,7 @@ public class CarController2 : MonoBehaviour
 
     public float CurrentSpeed { get { return m_Rigidbody.velocity.magnitude * 2.23693629f; } }
 
-    [SerializeField] private float maxVelocity = 100;
+    [SerializeField] private float maxVelocity = 300;
     public float MaxSpeed { get { return maxVelocity; } }
 
 
@@ -97,6 +97,10 @@ public class CarController2 : MonoBehaviour
         footbrake = -1 * Mathf.Clamp(footbrake, -1, 0);
 
 
+        Debug.Log(steering);
+        Debug.Log(accel);
+        Debug.Log(footbrake);
+
         //Set the steer on the front wheels.
         //Assuming that wheels 0 and 1 are the front wheels.
         m_SteerAngle = steering * m_MaximumSteerAngle;
@@ -108,6 +112,7 @@ public class CarController2 : MonoBehaviour
         thrust = 0.0f;
         float acceleration = accel;
 
+
         if (acceleration > deadZone)
             thrust = acceleration * forwardAcceleration;
         else if (acceleration < -deadZone)
@@ -117,6 +122,7 @@ public class CarController2 : MonoBehaviour
         float turnAxis = steering;
         if (Mathf.Abs(turnAxis) > deadZone /*&& body.velocity.sqrMagnitude > 5f*/)
             turnValue = turnAxis;
+
 
         // Controlador de la friccion        
         if (ruedas[0].grounded == false && ruedas[1].grounded == false && ruedas[2].grounded == false && ruedas[3].grounded == false)

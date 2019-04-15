@@ -60,6 +60,10 @@ public class IaCoche : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        Debug.Log(m_Target);
+        Debug.Log(m_Driving);
+
         if (m_Target == null || !m_Driving)
         {
             // Car should not be moving,
