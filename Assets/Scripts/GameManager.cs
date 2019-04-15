@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private string[] arrayNameCircuits = {"Cubo y pala", "Guarderia"};
     int numScene = 4;
 
-    public Circuito[] circuitos;
+    
 
     
 
@@ -46,21 +46,23 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void setArrayCircuit()
+    public Circuito[] setArrayCircuit()
     {
+        Circuito[] circuitos = new Circuito[numeroDeCircuitos];
         for(int i=0; i < numeroDeCircuitos; i++)
         {
             //Debug.Log(i);
             circuitos[i] = new Circuito(arrayNameCircuits[i], numScene);
-            Debug.Log("Circuitos creados: "+arrayNameCircuits[i]+" con escenario numero "+numScene);
+            //Debug.Log("Circuitos creados: "+arrayNameCircuits[i]+" con escenario numero "+numScene);
             numScene++;
         }
+
+        return circuitos;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        circuitos = new Circuito[numeroDeCircuitos];
         //setArrayCircuit();
     }
 

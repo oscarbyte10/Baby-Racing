@@ -900,6 +900,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: circuitName
       objectReference: {fileID: 0}
+    - target: {fileID: 5739255373285659409, guid: f16ee49c7975c004eb046cff0d1a2912,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739255373285659409, guid: f16ee49c7975c004eb046cff0d1a2912,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739255373285659409, guid: f16ee49c7975c004eb046cff0d1a2912,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739255373285659409, guid: f16ee49c7975c004eb046cff0d1a2912,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f16ee49c7975c004eb046cff0d1a2912, type: 3}
 --- !u!1 &1639915459
@@ -931,8 +951,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 520e5fe06dd09a944983587e011305e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circuito: []
   numeroDeCircuitos: 2
+  circuitos:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &1639915461
 Transform:
   m_ObjectHideFlags: 0

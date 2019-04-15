@@ -6,83 +6,70 @@ using UnityEngine.UI;
 public class SceneCircuit : MonoBehaviour
 {
 
-    private Button[] arrayButton;
     public Sprite[] sprites;
     private Image image;
     private int count = 0;
-    private Circuito c;
     public GameManager GM;
-    
-
     // Nombre del circuito
     private Text textBox;
+    // Array de circuitos
+    private Circuito[] array;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        GM.setArrayCircuit();
-        arrayButton = GetComponentsInChildren<Button>();
+        array = GM.setArrayCircuit();
         image = GameObject.Find("showCircuit").GetComponent<Image>();
         textBox = GameObject.Find("circuitName").GetComponent<Text>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-    public void showButtonsInConsole()
-    {
-        for (int i = 0; i < arrayButton.Length; i++)
-        {
-            //Debug.Log(arrayButton[i].gameObject.name);
-        }
-    }
+        beforeCircuit();
+        //Debug.Log("Al inicio count es "+count);
+    }// Start
 
     // Visualizamos el circuito anterior
     public void beforeCircuit()
     {
         //Debug.Log("Arriba");
         count--;
-
+        //Debug.Log("Cuando le damos al before count es "+count);
         if (count < 0)
         {
-            // No haces nada
-            count++;
+            //
+            //Debug.Log("Cuando le damos a nextCircuit circuito es " + array[count].CircuitName);
+            count =0;
+            image.sprite = sprites[count];
+            textBox.text = array[count].CircuitName;
+            
         }
         else
         {
+            //Debug.Log("Cuando le damos a beforeCircuit count es " + count);
+            //Debug.Log("Cuando le damos a nextCircuit circuito es " + array[count].CircuitName);
             //Debug.Log("Sprite: " + sprites[count].name);
             image.sprite = sprites[count];
-            c = GM.circuitos[count];
-            //Debug.Log(c.CircuitName);
-            //Debug.Log(c.NumScene);
+            textBox.text = array[count].CircuitName;
         }
-    }
+
+    }//Before circuit
 
     // Visualizamos el siguiente circuito
     public void nextCircuit()
     {
-        //Debug.Log("Abajo");
 
         count++;
-
-        if(count >= sprites.Length)
+        Debug.Log(count);
+        if(count > sprites.Length)
         {
             // No haces nada
-            count--;
+            count = sprites.Length - 1;
         }else
         {
+            //Debug.Log("Cuando le damos a nextCircuit count es " + count);
+            //Debug.Log("Cuando le damos a nextCircuit circuito es " + array[count].CircuitName);
             //Debug.Log("Sprite: "+sprites[count].name);
             image.sprite = sprites[count];
-            c = GM.circuitos[count];
-            //Debug.Log(c.CircuitName);
-            //Debug.Log(c.NumScene);
+            textBox.text = array[count].CircuitName;
         }
 
-    }
-
-
-}
+    }//Next circuit
+}// Close class
