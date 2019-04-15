@@ -198,7 +198,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1049858214}
-        m_MethodName: showButtonsInConsole
+        m_MethodName: okCircuit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 666814546}
   - component: {fileID: 666814545}
   m_Layer: 5
-  m_Name: Abajo
+  m_Name: Derecha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 1029120271}
   - component: {fileID: 1029120270}
   m_Layer: 5
-  m_Name: Arriba
+  m_Name: Izquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -952,9 +952,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numeroDeCircuitos: 2
-  circuitos:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &1639915461
 Transform:
   m_ObjectHideFlags: 0

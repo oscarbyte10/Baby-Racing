@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SceneCircuit : MonoBehaviour
 {
@@ -25,6 +26,15 @@ public class SceneCircuit : MonoBehaviour
         beforeCircuit();
         //Debug.Log("Al inicio count es "+count);
     }// Start
+
+    public void okCircuit()
+    {
+        Debug.Log(array[count].NumScene);
+        // Cuando tengamos más circuitos simplemente debemos de añadir el NumScene dentro del LoadScene
+        SceneManager.LoadScene(3);
+        // 
+
+    }
 
     // Visualizamos el circuito anterior
     public void beforeCircuit()
