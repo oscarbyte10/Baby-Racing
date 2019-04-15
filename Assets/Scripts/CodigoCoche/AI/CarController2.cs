@@ -9,8 +9,6 @@ using UnityEngine;
 public class CarController2 : MonoBehaviour
 {
     [SerializeField] private CarDriveType m_CarDriveType = CarDriveType.FourWheelDrive;
-    [SerializeField] private WheelCollider[] m_WheelColliders = new WheelCollider[4];
-    [SerializeField] private GameObject[] m_WheelMeshes = new GameObject[4];
     [SerializeField] private Vector3 m_CentreOfMassOffset;
     [SerializeField] private float m_MaximumSteerAngle;
     [Range(0, 1)] [SerializeField] private float m_SteerHelper; // 0 is raw physics , 1 the car will grip in the direction it is facing
@@ -20,7 +18,6 @@ public class CarController2 : MonoBehaviour
     [SerializeField] private float m_MaxHandbrakeTorque;
     [SerializeField] private float m_Downforce = 100f;
     [SerializeField] private SpeedType m_SpeedType;
-    [SerializeField] private float m_Topspeed = 200;
     [SerializeField] private float m_SlipLimit;
     [SerializeField] private float m_BrakeTorque;
 
@@ -32,12 +29,21 @@ public class CarController2 : MonoBehaviour
     private Rigidbody m_Rigidbody;
 
     public float CurrentSpeed { get { return m_Rigidbody.velocity.magnitude * 2.23693629f; } }
-    public float MaxSpeed { get { return m_Topspeed; } }
 
-
+    [SerializeField] private float maxVelocity = 100;
+    public float MaxSpeed { get { return maxVelocity; } }
 
 
     //-----------------MIO----------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------------
+    float deadZone = 0.1f;
+
+    public float groundedDrag = 3f;
+
+
+    private float forwardAcceleration = 1400f;
+    private float reverseAcceleration = 150f;
+
     float thrust = 0f;
     private float turnStrength = 80f;
 
@@ -49,20 +55,13 @@ public class CarController2 : MonoBehaviour
 
     private Suspension rueda;
     public List<Suspension> ruedas; //referencia a la clase suspension
-    public float groundedDrag = 3f;
-
+    //------------------------------------------------------------------------------------------------------------------
     //-----------------MIO----------------------------------------------------------------------------------------------
 
 
     // Use this for initialization
     private void Start()
     {
-        m_WheelMeshLocalRotations = new Quaternion[4];
-        for (int i = 0; i < 4; i++)
-        {
-            m_WheelMeshLocalRotations[i] = m_WheelMeshes[i].transform.localRotation;
-        }
-        m_WheelColliders[0].attachedRigidbody.centerOfMass = m_CentreOfMassOffset;
 
         m_MaxHandbrakeTorque = float.MaxValue;
 
@@ -71,6 +70,7 @@ public class CarController2 : MonoBehaviour
 
 
         //-----------------MIO----------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------
         int u = 0;
         while (u <= 3)
         {
@@ -78,6 +78,9 @@ public class CarController2 : MonoBehaviour
             ruedas.Add(rueda);
             u++;
         }
+        center = m_Rigidbody.centerOfMass;
+        m_Rigidbody.centerOfMass = new Vector3(0, -1f, 0); //UNO POR DEBAJO DEL VEHICULO, no es realista, pero asi sera dificil que el coche quede boca abajo
+        //------------------------------------------------------------------------------------------------------------------
         //-----------------MIO----------------------------------------------------------------------------------------------
 
     }
@@ -86,14 +89,7 @@ public class CarController2 : MonoBehaviour
 
     public void Move(float steering, float accel, float footbrake)
     {
-        for (int i = 0; i < 4; i++)
-        {
-            Quaternion quat;
-            Vector3 position;
-            m_WheelColliders[i].GetWorldPose(out position, out quat);
-            m_WheelMeshes[i].transform.position = position;
-            m_WheelMeshes[i].transform.rotation = quat;
-        }
+
 
         //clamp input values
         steering = Mathf.Clamp(steering, -1, 1);
@@ -104,11 +100,23 @@ public class CarController2 : MonoBehaviour
         //Set the steer on the front wheels.
         //Assuming that wheels 0 and 1 are the front wheels.
         m_SteerAngle = steering * m_MaximumSteerAngle;
-        m_WheelColliders[0].steerAngle = m_SteerAngle;
-        m_WheelColliders[1].steerAngle = m_SteerAngle;
+        //m_WheelColliders[0].steerAngle = m_SteerAngle;
+        //m_WheelColliders[1].steerAngle = m_SteerAngle;
 
         //-----------------MIO----------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------
+        thrust = 0.0f;
+        float acceleration = accel;
 
+        if (acceleration > deadZone)
+            thrust = acceleration * forwardAcceleration;
+        else if (acceleration < -deadZone)
+            thrust = acceleration * reverseAcceleration;
+
+        turnValue = 0.0f;
+        float turnAxis = steering;
+        if (Mathf.Abs(turnAxis) > deadZone /*&& body.velocity.sqrMagnitude > 5f*/)
+            turnValue = turnAxis;
 
         // Controlador de la friccion        
         if (ruedas[0].grounded == false && ruedas[1].grounded == false && ruedas[2].grounded == false && ruedas[3].grounded == false)
@@ -123,13 +131,10 @@ public class CarController2 : MonoBehaviour
             m_Rigidbody.drag = groundedDrag;
         }
 
-        // Controlador de las fuerzas hacia adelante, atra y parado
+        // Controlador de las fuerzas hacia adelante, atras y parada
         if (thrust > 0)
         {
             localF = transform.forward;
-            //localF.y = localF.y - 0.5f;
-            //center.y = center.y - 0.2f;
-            //center.z = center.z + 0.5f;
 
             Vector3 normal0 = ruedas[0].normalVec;
             Vector3 normal1 = ruedas[1].normalVec;
@@ -174,6 +179,7 @@ public class CarController2 : MonoBehaviour
             Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
             m_Rigidbody.MoveRotation(m_Rigidbody.rotation * deltaRotation);
         }
+        //------------------------------------------------------------------------------------------------------------------
         //-----------------MIO----------------------------------------------------------------------------------------------
 
         SteerHelper();
@@ -195,7 +201,7 @@ public class CarController2 : MonoBehaviour
                 thrustTorque = accel * (m_CurrentTorque / 4f);
                 for (int i = 0; i < 4; i++)
                 {
-                    m_WheelColliders[i].motorTorque = thrustTorque;
+                    //m_WheelColliders[i].motorTorque = thrustTorque;
                 }
                 break;
         }
@@ -204,12 +210,12 @@ public class CarController2 : MonoBehaviour
         {
             if (CurrentSpeed > 5 && Vector3.Angle(transform.forward, m_Rigidbody.velocity) < 50f)
             {
-                m_WheelColliders[i].brakeTorque = m_BrakeTorque * footbrake;
+                //m_WheelColliders[i].brakeTorque = m_BrakeTorque * footbrake;
             }
             else if (footbrake > 0)
             {
-                m_WheelColliders[i].brakeTorque = 0f;
-                m_WheelColliders[i].motorTorque = -m_ReverseTorque * footbrake;
+                //m_WheelColliders[i].brakeTorque = 0f;
+                //m_WheelColliders[i].motorTorque = -m_ReverseTorque * footbrake;
             }
         }
     }
@@ -220,8 +226,8 @@ public class CarController2 : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             WheelHit wheelhit;
-            m_WheelColliders[i].GetGroundHit(out wheelhit);
-            if (wheelhit.normal == Vector3.zero)
+            //m_WheelColliders[i].GetGroundHit(out wheelhit);
+            //if (wheelhit.normal == Vector3.zero)
                 return; // wheels arent on the ground so dont realign the rigidbody velocity
         }
 
@@ -239,8 +245,7 @@ public class CarController2 : MonoBehaviour
     // this is used to add more grip in relation to speed
     private void AddDownForce()
     {
-        m_WheelColliders[0].attachedRigidbody.AddForce(-transform.up * m_Downforce *
-                                                     m_WheelColliders[0].attachedRigidbody.velocity.magnitude);
+        //m_WheelColliders[0].attachedRigidbody.AddForce(-transform.up * m_Downforce * m_WheelColliders[0].attachedRigidbody.velocity.magnitude);
     }
 
     // crude traction control that reduces the power to wheel if the car is wheel spinning too much
@@ -253,9 +258,9 @@ public class CarController2 : MonoBehaviour
                 // loop through all wheels
                 for (int i = 0; i < 4; i++)
                 {
-                    m_WheelColliders[i].GetGroundHit(out wheelHit);
+                    //m_WheelColliders[i].GetGroundHit(out wheelHit);
 
-                    AdjustTorque(wheelHit.forwardSlip);
+                    //AdjustTorque(wheelHit.forwardSlip);
                 }
                 break;
         }

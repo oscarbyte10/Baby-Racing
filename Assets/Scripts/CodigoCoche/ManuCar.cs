@@ -58,7 +58,7 @@ public class ManuCar : MonoBehaviour
         //--------GAMEOBJECTS--------
         body = GetComponent<Rigidbody>();
         center = body.centerOfMass;
-        body.centerOfMass = Vector3.down; //UNO POR DEBAJO DEL VEHICULO, no es realista, pero asi sera dificil que el coche quede boca abajo
+        body.centerOfMass = new Vector3(0 ,-1f ,0); //UNO POR DEBAJO DEL VEHICULO, no es realista, pero asi sera dificil que el coche quede boca abajo
 
         layerMask = 1 << LayerMask.NameToLayer("Vehicle");
         layerMask = ~layerMask;
@@ -104,8 +104,8 @@ public class ManuCar : MonoBehaviour
         {
             //emissionRate = 10;
             body.drag = 0.1f;
-            thrust /= 200f;
-            turnValue /= 20f;
+            thrust /= 100f;
+            turnValue /= 5f;
         }
         else
         {

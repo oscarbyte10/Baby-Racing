@@ -12,7 +12,7 @@ public class Suspension : MonoBehaviour
     private float hoverForce = 1500f;
     private float hoverHeight = 0.5f;
     private float groundDetection = 0.7f;
-    float hoverDamp = 10f;
+    float hoverDamp = 20f;
 
     public bool grounded;
     public Vector3 normalVec = new Vector3();

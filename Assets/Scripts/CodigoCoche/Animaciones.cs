@@ -30,7 +30,7 @@ public class Animaciones : MonoBehaviour
         _aceleracion = Input.GetAxis("Vertical");
 
 
-        if (coche.velocity.sqrMagnitude > 5f)
+        if (coche.velocity.sqrMagnitude > 0f)
         {
             anim.SetFloat("giro", _giro); //al giro del animator
         }
