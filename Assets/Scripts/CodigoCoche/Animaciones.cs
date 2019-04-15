@@ -26,7 +26,11 @@ public class Animaciones : MonoBehaviour
     void Update()
     {
         coche = transform.root.GetComponent<Rigidbody>();
-        if(coche.velocity.sqrMagnitude > 5f)
+        _giro = Input.GetAxis("Horizontal");
+        _aceleracion = Input.GetAxis("Vertical");
+
+
+        if (coche.velocity.sqrMagnitude > 5f)
         {
             anim.SetFloat("giro", _giro); //al giro del animator
         }
@@ -35,8 +39,6 @@ public class Animaciones : MonoBehaviour
             anim.SetFloat("giro", 0); //al giro del animator
         }
 
-        _giro = Input.GetAxis("Horizontal");
-        _aceleracion = Input.GetAxis("Vertical");
 
 
         anim.SetFloat("aceleracion", _aceleracion);

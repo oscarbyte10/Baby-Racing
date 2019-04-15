@@ -69,9 +69,9 @@ public class ManuCar : MonoBehaviour
         {
             rueda = transform.Find("w" + i).GetComponent<Suspension>(); //referencia  a la instancia particular/local de la clase suspension de cada rueda
             ruedas.Add(rueda);
+            Debug.Log(rueda);
             i++;
         }
-
     }
 
 
@@ -95,15 +95,9 @@ public class ManuCar : MonoBehaviour
         if (Mathf.Abs(turnAxis) > deadZone /*&& body.velocity.sqrMagnitude > 5f*/)
             turnValue = turnAxis;
 
-        //anim.SetFloat("giro", turnValue); //al giro del animator
-
-        
 
         //var emissionRate = 0;
-
-        
-        GroundDetector ground;
-        ground = gameObject.GetComponentInChildren<GroundDetector>();
+       
 
         // Controlador de la friccion        
         if (ruedas[0].grounded == false && ruedas[1].grounded == false && ruedas[2].grounded == false && ruedas[3].grounded == false)
@@ -112,12 +106,9 @@ public class ManuCar : MonoBehaviour
             body.drag = 0.1f;
             thrust /= 200f;
             turnValue /= 20f;
-
-            Debug.Log("Volando voy");
         }
         else
         {
-            Debug.Log("En tierra estoy");
             body.drag = groundedDrag;
         }
 
@@ -137,8 +128,6 @@ public class ManuCar : MonoBehaviour
             //localF.y = localF.y - 0.5f;
             //center.y = center.y - 0.2f;
             //center.z = center.z + 0.5f;
-
-
 
             Vector3 normal0 = ruedas[0].normalVec;
             Vector3 normal1 = ruedas[1].normalVec;

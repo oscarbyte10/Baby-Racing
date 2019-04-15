@@ -549,14 +549,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c7e07941d973eb4d87d4c6f59bafc21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityForce: 10
-  grounded: 1
-  normalVec: {x: 0, y: 0, z: 0}
-  hoverPoint: {fileID: 1398754364}
-  raycastPoint: {fileID: 0}
-  ruedaReal: {fileID: 0}
-  point: {x: 0, y: 0, z: 0}
-  ruedaIni: {x: 0, y: 0, z: 0}
 --- !u!1 &1467733187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,13 +1501,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6521901502517937200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7e07941d973eb4d87d4c6f59bafc21, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ec1e45165d1f2544bff59f5a80db8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityForce: 10
-  grounded: 1
+  gravityForce: 1000
+  grounded: 0
   normalVec: {x: 0, y: 0, z: 0}
-  hoverPoint: {fileID: 6521901502517937201}
+  hoverPoint: {fileID: 0}
   raycastPoint: {fileID: 0}
   ruedaReal: {fileID: 0}
   point: {x: 0, y: 0, z: 0}
@@ -1656,13 +1648,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6521901502776445425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7e07941d973eb4d87d4c6f59bafc21, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ec1e45165d1f2544bff59f5a80db8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityForce: 10
-  grounded: 1
+  gravityForce: 1000
+  grounded: 0
   normalVec: {x: 0, y: 0, z: 0}
-  hoverPoint: {fileID: 6521901502776445438}
+  hoverPoint: {fileID: 0}
   raycastPoint: {fileID: 0}
   ruedaReal: {fileID: 0}
   point: {x: 0, y: 0, z: 0}
@@ -1676,13 +1668,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6521901503175348324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7e07941d973eb4d87d4c6f59bafc21, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ec1e45165d1f2544bff59f5a80db8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityForce: 10
-  grounded: 1
+  gravityForce: 1000
+  grounded: 0
   normalVec: {x: 0, y: 0, z: 0}
-  hoverPoint: {fileID: 6521901503175348325}
+  hoverPoint: {fileID: 0}
   raycastPoint: {fileID: 0}
   ruedaReal: {fileID: 0}
   point: {x: 0, y: 0, z: 0}
@@ -1743,13 +1735,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6521901503381497899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7e07941d973eb4d87d4c6f59bafc21, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ec1e45165d1f2544bff59f5a80db8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityForce: 10
-  grounded: 1
+  gravityForce: 1000
+  grounded: 0
   normalVec: {x: 0, y: 0, z: 0}
-  hoverPoint: {fileID: 6521901503381497896}
+  hoverPoint: {fileID: 0}
   raycastPoint: {fileID: 0}
   ruedaReal: {fileID: 0}
   point: {x: 0, y: 0, z: 0}
