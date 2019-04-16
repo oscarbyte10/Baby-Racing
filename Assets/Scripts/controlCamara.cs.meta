@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 2abe116e309107d47b51b97df8d6ca75
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - camara: {fileID: 6258432156262273016, guid: 814cc3d30e47ee54ca55e63ca28e9cef,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
