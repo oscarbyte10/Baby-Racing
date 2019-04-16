@@ -532,8 +532,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &49137585
 GameObject:
   m_ObjectHideFlags: 0
