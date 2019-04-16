@@ -9,15 +9,23 @@ public class Suspension : MonoBehaviour
     private Transform ruedaTransform;
 
     public float gravityForce = 1000f;
-    private float hoverForce = 380f;
-    public float hoverHeight = 0.2f;
-    float hoverDamp = 10f;
+    private float hoverForce = 1500f;
+    private float hoverHeight = 0.5f;
+    private float groundDetection = 0.7f;
+    float hoverDamp = 20f;
 
     public bool grounded;
+    public Vector3 normalVec = new Vector3();
 
     public Transform hoverPoint;
     int layerMask;
 
+    private RaycastHit hit;
+    public Transform raycastPoint;
+    // Works like start but before it
+    public Transform ruedaReal;
+    public Vector3 point;
+    public Vector3 ruedaIni;
 
     // Works like start but before it
 
@@ -26,8 +34,7 @@ public class Suspension : MonoBehaviour
         coche = transform.root.GetComponent<Rigidbody>();
         rueda = this.gameObject;
         hoverPoint = rueda.transform;
-        //Debug.Log(hoverPoint);
-        
+        Debug.Log(hoverPoint);
     }
 
     // Start is called before the first frame update
@@ -37,7 +44,8 @@ public class Suspension : MonoBehaviour
         layerMask = 1 << LayerMask.GetMask("coche de pruebas");
         layerMask = ~layerMask;
 
-
+        ruedaReal = this.gameObject.transform.GetChild(0);
+        ruedaIni = ruedaReal.InverseTransformPoint(ruedaReal.transform.position);
     }
 
 
@@ -50,15 +58,22 @@ public class Suspension : MonoBehaviour
         //  Hover Force
         RaycastHit hit;
 
-        if (Physics.Raycast(hoverPoint.transform.position, -Vector3.up, out hit, hoverHeight))
-            {
-            float compression =  hoverHeight - hit.distance;
-            float upwardSpeed = coche.velocity.y; 
+        if (Physics.Raycast(hoverPoint.transform.position, -transform.up, out hit, hoverHeight))
+        {
+            float compression = hoverHeight - hit.distance;
+            float upwardSpeed = coche.velocity.y;
             float elevacion = compression * hoverForce - upwardSpeed * hoverDamp;
 
+            normalVec = hit.normal;
+
             coche.AddForceAtPosition(Vector3.up * elevacion, hoverPoint.transform.position);
-                grounded = true;
-                //Debug.DrawRay(hit.point, hit.normal, Color.red);
+
+
+            point = hit.point;
+            point.y = point.y + 0.3f;
+            ruedaReal.transform.position = Vector3.MoveTowards(transform.position, point, 2f);
+            Debug.DrawRay(hit.point, hit.normal, Color.red);
+
         }
         else
         {
@@ -66,14 +81,31 @@ public class Suspension : MonoBehaviour
             if (transform.position.y > hoverPoint.transform.position.y)
             {
                 coche.AddForceAtPosition(hoverPoint.transform.up * gravityForce, hoverPoint.transform.position);
-                grounded = false;
             }
             else
             {
                 coche.AddForceAtPosition(hoverPoint.transform.up * -gravityForce, hoverPoint.transform.position);
-                grounded = false;
             }
         }
+
+
+        if (Physics.Raycast(hoverPoint.transform.position, -transform.up, out hit, groundDetection))
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
+
+        Debug.DrawRay(hit.point, transform.up, Color.red);
+
+
+
+
+
+
+
 
 
         /*
@@ -96,44 +128,31 @@ public class Suspension : MonoBehaviour
                 }
             }
             /*
-
         //--------RAYCAST--------
-
-
-
         // down = local downwards direction
         //Vector3 down = transform.TransformDirection(Vector3.down);
-
         if (Physics.Raycast(transform.position, Vector3.down, out hit, radioRueda + suspLongMaxima))
         {
-
             grounded = true;
             // the velocity at point of contact
             //Vector3 velocityAtTouch = parent.GetPointVelocity(hit.point);
-
             // calculate spring compression
             // difference in positions divided by total suspension range
             float compression = hit.distance / (suspLongMaxima + radioRueda);
             compression = -compression + 1;
-
             // final force
             //Vector3 force = Vector3.down * compression * spring;
             // velocity at point of contact transformed into local space
-
             // Vector3 t = transform.InverseTransformDirection(velocityAtTouch);
-
             // local x and z directions = 0
             //t.z = t.x = 0;
-
             // back to world space * -damping
             //Vector3 damping = transform.TransformDirection(t) * -damper;
             Vector3 finalForce = force;
-
             // VERY simple turning - force rigidbody in direction of wheel
             /*t = parent.transform.InverseTransformDirection(velocityAtTouch);
             t.y = 0;
             t.z = 0;
-
             t = transform.TransformDirection(t);
             */
 
