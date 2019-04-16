@@ -159,11 +159,18 @@ public class Conducir : MonoBehaviour
         }
 
 
+        //Código que añade nitro al presionar shift izquierdo
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            Showtime = 0.5f;
+            if (c.comprobarNitroLleno() != 0)
+            {
+                // Si esta lleno vaciara el nitro en el CANVAS y le añade el impulso
+                c.vaciarNitro(c.comprobarNitroLleno());
+                Showtime = 0.5f;
+            }
         }
+
 
         if (Showtime > 0f)
         {
@@ -215,5 +222,51 @@ public class Conducir : MonoBehaviour
         }
         //--------MOVEMENT--------
 
+    }
+
+    /*
+     * MATTHEW WAS HERE!!
+     */
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Acelerador"))
+        {
+
+
+            Showtime = .5f;
+
+            if (Showtime > 0f)
+            {
+                Showtime = Showtime - (Time.deltaTime);
+                Vector3 forward = transform.forward;
+                forward.y = 0f;
+                body.AddForce(forward * 30, ForceMode.Impulse); //aplicar impulso hacia delante local
+            }
+
+
+        }
+        else if (other.gameObject.CompareTag("Charco"))
+        {
+            //Debug.Log("Charco de barro");
+
+            Showtime = .5f;
+
+            if (Showtime > 0f)
+            {
+                // Lo para durante unos segundos
+
+                // Añadimos animación durante esos segundos
+                Showtime = Showtime - (Time.deltaTime);
+                // nota: hacer animación en la que rueden las ruedas del coche y salpique barro a la pantalla del jugador
+
+            }
+            else
+            {
+                Debug.Log("Se acabo el tiempo, Go!!");
+                Vector3 forward = transform.forward;
+                forward.y = 0f;
+                body.AddForce(forward * 30, ForceMode.Acceleration); //aplicar impulso hacia delante local
+            }
+        }
     }
 }
