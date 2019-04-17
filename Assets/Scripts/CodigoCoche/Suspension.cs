@@ -104,7 +104,7 @@ public class Suspension : MonoBehaviour
 
 
 
-
+   
 
 
 
@@ -128,31 +128,44 @@ public class Suspension : MonoBehaviour
                 }
             }
             /*
+
         //--------RAYCAST--------
+
+
+
         // down = local downwards direction
         //Vector3 down = transform.TransformDirection(Vector3.down);
+
         if (Physics.Raycast(transform.position, Vector3.down, out hit, radioRueda + suspLongMaxima))
         {
+
             grounded = true;
             // the velocity at point of contact
             //Vector3 velocityAtTouch = parent.GetPointVelocity(hit.point);
+
             // calculate spring compression
             // difference in positions divided by total suspension range
             float compression = hit.distance / (suspLongMaxima + radioRueda);
             compression = -compression + 1;
+
             // final force
             //Vector3 force = Vector3.down * compression * spring;
             // velocity at point of contact transformed into local space
+
             // Vector3 t = transform.InverseTransformDirection(velocityAtTouch);
+
             // local x and z directions = 0
             //t.z = t.x = 0;
+
             // back to world space * -damping
             //Vector3 damping = transform.TransformDirection(t) * -damper;
             Vector3 finalForce = force;
+
             // VERY simple turning - force rigidbody in direction of wheel
             /*t = parent.transform.InverseTransformDirection(velocityAtTouch);
             t.y = 0;
             t.z = 0;
+
             t = transform.TransformDirection(t);
             */
 
